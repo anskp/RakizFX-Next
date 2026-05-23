@@ -171,12 +171,12 @@ export default function MarketPage() {
     <div className="bg-white text-black min-h-screen">
       
       {/* 1. Hero Section */}
-      <section id="overview" className="relative pt-32 pb-20 overflow-hidden text-black min-h-screen flex items-center">
+      <section id="overview" className="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden text-black min-h-[70vh] md:min-h-screen flex items-center">
         <div className="absolute inset-0 z-0">
-          <img src="/assets/herooo.png" alt="Market Hero Background" className="w-full h-full object-cover" />
+          <img src="/assets/herooo.png" alt="Market Hero Background" className="w-full h-full object-cover object-right md:object-center" />
         </div>
-        {/* Light gradient fade to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent lg:w-2/3 pointer-events-none" />
+        {/* Gradient: semi-transparent overlay on mobile, fades on desktop */}
+        <div className="absolute inset-0 bg-white/40 md:bg-gradient-to-r md:from-white/90 md:via-white/50 md:to-transparent pointer-events-none" />
 
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10 text-left w-full">
           <div className="max-w-2xl lg:max-w-3xl text-left">
@@ -185,9 +185,9 @@ export default function MarketPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl lg:text-[clamp(3.5rem,4vw,4.5rem)] font-black uppercase tracking-tight mb-5 lg:mb-6 leading-tight lg:leading-[1.05]">
+              <h1 className="text-4xl md:text-6xl lg:text-[clamp(3.5rem,4vw,4.5rem)] font-black uppercase tracking-tight mb-5 lg:mb-6 leading-tight lg:leading-[1.05] text-[#0d1410]">
                 Markets <br/>
-                <span className="text-primary font-normal italic">Across Global Markets</span>
+                <span className="text-[#004D34] font-semibold">Across Global Markets</span>
               </h1>
 
               <p className="text-zinc-800 text-sm md:text-base lg:text-[clamp(1.125rem,1.5vw,1.25rem)] font-medium mb-8 lg:mb-10 leading-relaxed max-w-xl lg:max-w-2xl">
@@ -300,7 +300,7 @@ export default function MarketPage() {
           </div>
 
           {/* Payment Badges Grid */}
-          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14 mb-16 w-full">
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 lg:gap-14 mb-16 w-full">
             {[
               { logo: '/icons/bank-svgrepo-com.svg', name: 'Bank Transfer' },
               { logo: '/icons/visa-svgrepo-com (1).svg', name: 'Visa' },
@@ -430,7 +430,7 @@ export default function MarketPage() {
       {/* 9. CTA Section */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-[1200px] mx-auto">
-          <div className="bg-[#121212] border border-white/5 rounded-[3rem] p-10 md:p-20 text-center relative overflow-hidden shadow-2xl">
+          <div className="bg-[#121212] border border-white/5 rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl">
             <div className="relative z-10">
               <div className="text-primary font-black text-[10px] uppercase tracking-[0.4em] mb-8">Start Your Journey</div>
               <h2 className="text-4xl md:text-7xl font-bold text-white uppercase mb-6 tracking-tight leading-[0.9]">

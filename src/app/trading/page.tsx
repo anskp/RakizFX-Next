@@ -143,14 +143,14 @@ export default function TradingPage() {
     <div className="bg-white text-black min-h-screen">
       
       {/* 1. Hero Section */}
-      <section id="overview" className="relative pt-32 pb-20 overflow-hidden text-black min-h-screen flex items-center">
+      <section id="overview" className="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden text-black min-h-[70vh] md:min-h-screen flex items-center">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100 pointer-events-none"
           style={{ backgroundImage: "url('/assets/tradinghero02.png')" }}
         />
         {/* Light gradient fade to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent lg:w-2/3 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent pointer-events-none" />
 
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10 w-full">
           <div className="max-w-2xl lg:max-w-3xl text-left">
@@ -159,9 +159,9 @@ export default function TradingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl lg:text-[clamp(3.5rem,4vw,4.5rem)] font-black uppercase tracking-tight mb-5 lg:mb-6 leading-tight lg:leading-[1.05]">
+              <h1 className="text-4xl md:text-6xl lg:text-[clamp(3.5rem,4vw,4.5rem)] font-black uppercase tracking-tight mb-5 lg:mb-6 leading-tight lg:leading-[1.05] text-[#0d1410]">
                 Trade Global Markets <br/>
-                <span className="text-primary font-normal italic">With Confidence</span>
+                <span className="text-[#004D34] font-semibold">With Confidence</span>
               </h1>
 
               <p className="text-zinc-800 text-sm md:text-base lg:text-[clamp(1.125rem,1.5vw,1.25rem)] font-medium mb-8 lg:mb-10 leading-relaxed max-w-xl lg:max-w-2xl">
@@ -195,7 +195,7 @@ export default function TradingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
             {/* Large Feature 1 */}
-            <div className="md:col-span-8 relative overflow-hidden rounded-[2.5rem] bg-zinc-900 group flex flex-col justify-end min-h-[400px]">
+            <div className="md:col-span-8 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-zinc-900 group flex flex-col justify-end min-h-[280px] md:min-h-[400px]">
               <div className="absolute inset-0 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=1200&q=80" 
@@ -215,7 +215,7 @@ export default function TradingPage() {
             </div>
 
             {/* Medium Feature 1 */}
-            <div className="md:col-span-4 relative overflow-hidden rounded-[2.5rem] bg-gradient-to-b from-white to-zinc-50 group p-10 md:p-12 flex flex-col justify-between min-h-[400px]">
+            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-white to-zinc-50 group p-8 md:p-12 flex flex-col justify-between min-h-[280px] md:min-h-[400px]">
               <div>
                 <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 text-black group-hover:text-primary group-hover:bg-primary/10 transition-colors">
                   <Shield size={24} />
@@ -234,7 +234,7 @@ export default function TradingPage() {
             </div>
 
             {/* Medium Feature 2 */}
-            <div className="md:col-span-4 relative overflow-hidden rounded-[2.5rem] bg-[#121212] group p-10 flex flex-col justify-between min-h-[350px]">
+            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-[#121212] group p-8 md:p-10 flex flex-col justify-between min-h-[220px] md:min-h-[350px]">
               <div className="relative z-10">
                 <h3 className="text-2xl font-black uppercase tracking-tight text-white mb-3">Professional Platforms</h3>
                 <p className="text-zinc-400 text-sm leading-relaxed">
@@ -244,7 +244,7 @@ export default function TradingPage() {
             </div>
 
             {/* Medium Feature 3 */}
-            <div className="md:col-span-4 relative overflow-hidden rounded-[2.5rem] bg-gradient-to-b from-[#eafaf1] to-white group p-10 flex flex-col justify-between min-h-[350px]">
+            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-[#eafaf1] to-white group p-8 md:p-10 flex flex-col justify-between min-h-[220px] md:min-h-[350px]">
               <div className="relative z-10">
                 <h3 className="text-2xl font-black uppercase tracking-tight text-[#004D34] mb-3">Capital Protection</h3>
                 <p className="text-[#004D34]/70 text-sm font-medium leading-relaxed">
@@ -254,7 +254,7 @@ export default function TradingPage() {
             </div>
 
             {/* Medium Feature 4 */}
-            <div className="md:col-span-4 relative overflow-hidden rounded-[2.5rem] bg-white group flex flex-col justify-center items-center text-center p-10 min-h-[350px] hover:shadow-xl transition-all">
+            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-white group flex flex-col justify-center items-center text-center p-8 md:p-10 min-h-[220px] md:min-h-[350px] hover:shadow-xl transition-all border border-zinc-100">
               <h3 className="text-xl font-black uppercase tracking-tight text-black mb-3">Global Funding Rails</h3>
               <p className="text-zinc-500 text-sm px-4 leading-relaxed">
                 Fast deposits and withdrawals through banking, cards, crypto, and regional payment networks.
@@ -409,7 +409,7 @@ export default function TradingPage() {
       {/* 9. CTA Section */}
       <section className="pt-10 pb-24 px-6 bg-white">
         <div className="max-w-[1200px] mx-auto">
-          <div className="bg-[#121212] border border-white/5 rounded-[3rem] p-10 md:p-20 text-center relative overflow-hidden shadow-2xl">
+          <div className="bg-[#121212] border border-white/5 rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl">
             <div className="relative z-10">
               <div className="text-primary font-black text-[10px] uppercase tracking-[0.4em] mb-8">Start Your Journey</div>
               <h2 className="text-4xl md:text-5xl font-semibold text-white uppercase mb-12 tracking-tight leading-[0.9]">

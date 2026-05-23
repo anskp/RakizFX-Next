@@ -32,10 +32,10 @@ export function ArchitectureReliability() {
   ];
 
   return (
-    <section id="regulation" className="py-40 bg-white relative overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-12 relative z-10">
-        <div className="max-w-3xl mb-32">
-          <h2 className="text-5xl md:text-7xl font-bold text-black leading-tight uppercase mb-8 tracking-tighter">
+    <section id="regulation" className="py-16 md:py-40 bg-white relative overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+        <div className="max-w-3xl mb-12 md:mb-32">
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-black leading-tight uppercase mb-8 tracking-tighter">
             Architectural <br/>
             Platform Reliability
           </h2>

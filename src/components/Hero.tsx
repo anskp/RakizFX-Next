@@ -6,17 +6,20 @@ import { ArrowRight } from 'lucide-react';
 export function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-start overflow-hidden"
+      className="relative min-h-[70vh] md:min-h-screen flex items-center justify-start overflow-hidden"
       style={{
         backgroundImage: 'url(/assets/herohome.png)',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'right center',
         backgroundRepeat: 'no-repeat',
       }}
     >
 
+      {/* Overlay for mobile readability */}
+      <div className="absolute inset-0 bg-white/60 md:bg-transparent pointer-events-none" />
+
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-start text-left w-full max-w-2xl pl-14 md:pl-24 lg:pl-32">
+      <div className="relative z-10 flex flex-col items-start text-left w-full max-w-2xl px-6 md:pl-24 lg:pl-32">
 
         {/* Headline */}
         <h1

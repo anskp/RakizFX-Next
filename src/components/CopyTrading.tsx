@@ -51,19 +51,19 @@ export function CopyTrading() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative max-w-6xl mx-auto -mt-10 -mb-4 flex justify-center lg:translate-x-12 md:translate-x-6 z-0 pointer-events-none"
+          className="relative max-w-6xl mx-auto md:-mt-10 md:-mb-4 flex justify-center lg:translate-x-12 md:translate-x-6 z-0 pointer-events-none"
         >
           <div className="relative z-10 w-full flex justify-center">
             <img
               src="/assets/Frame 2.png"
               alt="Copy Trading Terminal"
-              className="max-w-5xl w-full h-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.15)]"
+              className="max-w-5xl w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)] md:drop-shadow-[0_30px_60px_rgba(0,0,0,0.15)]"
             />
           </div>
         </motion.div>
 
         {/* Third: Trader Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto px-4 md:px-0 relative z-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 max-w-5xl mx-auto px-2 md:px-0 relative z-10 mt-4 md:mt-0">
           {traders.map((t, i) => (
             <motion.div
               key={t.name}

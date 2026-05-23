@@ -15,7 +15,7 @@ export function TrustSection() {
             <p className="text-zinc-500 text-sm font-medium max-w-2xl mx-auto">Multiple methods tailored for Asian traders. Most deposits processed instantly.</p>
           </div>
 
-          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14 mb-10 w-full">
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 lg:gap-14 mb-10 w-full">
             {[
               { logo: '/icons/bank-svgrepo-com.svg', name: 'Bank Transfer' },
               { logo: '/icons/visa-svgrepo-com (1).svg', name: 'Visa' },
@@ -57,7 +57,7 @@ export function TrustSection() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-[#121212] border border-white/5 rounded-[3rem] p-10 md:p-20 text-center relative overflow-hidden shadow-2xl"
+            className="bg-[#121212] border border-white/5 rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl"
           >
             <div className="relative z-10">
               <h2 className="text-h2 text-white mb-6">Ready to get started?</h2>

@@ -81,8 +81,8 @@ export function TradingViewMarkets() {
   return (
     <section className="section-padding bg-white relative overflow-hidden">
       <div className="container-standard relative z-10">
-        <div className="flex flex-col lg:flex-row justify-between items-end gap-12 mb-16">
-          <div className="max-w-3xl text-center lg:text-left">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end gap-8 mb-16 text-center lg:text-left">
+          <div className="max-w-3xl">
             <h2 className="text-h2 mb-6 mt-2">
               Every market is <br/>
               waiting for you
@@ -91,7 +91,7 @@ export function TradingViewMarkets() {
               Institutional-grade pricing and analysis powered by TradingView. Access over 500+ instruments with millisecond-perfect execution protocols.
             </p>
           </div>
-          <button className="bg-zinc-100 border border-zinc-200 text-zinc-800 px-10 py-5 text-[12px] uppercase font-bold tracking-[0.3em] hover:bg-primary hover:text-black hover:border-primary transition-all flex items-center gap-4 rounded-xl shadow-sm hover:shadow-[0_10px_20px_rgba(0,202,115,0.2)] group cursor-pointer">
+          <button className="bg-zinc-100 border border-zinc-200 text-zinc-800 px-10 py-5 text-[12px] uppercase font-bold tracking-[0.3em] hover:bg-primary hover:text-black hover:border-primary transition-all flex items-center gap-4 rounded-xl shadow-sm hover:shadow-[0_10px_20px_rgba(0,202,115,0.2)] group cursor-pointer mx-auto lg:mx-0">
              Explore All Asset Groups <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

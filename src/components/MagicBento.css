@@ -235,10 +235,21 @@
 @media (max-width: 640px) {
   .rakiz-bento-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 12px;
   }
 
-  .card-hero,
-  .card-right { grid-column: 1; }
-  .card-smalls-row { grid-template-columns: 1fr 1fr; }
+  .card-hero { grid-column: 1; min-height: 240px; }
+  .card-right { grid-column: 1; min-height: 260px; }
+
+  /* Commodities & Indices: stack vertically, each with decent height */
+  .card-smalls-row {
+    grid-column: 1;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .card-small {
+    min-height: 140px;
+    padding: 1em;
+  }
 }

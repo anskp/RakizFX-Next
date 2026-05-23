@@ -1,0 +1,244 @@
+:root {
+  --rakiz-glow: rgba(0, 202, 115, 1);
+  --rakiz-glow-soft: rgba(0, 202, 115, 0.1);
+  --rakiz-border: rgba(0, 202, 115, 0.25);
+  --border-color: rgba(0, 202, 115, 0.15);
+  --background-card: #ffffff;
+}
+
+/* ─── GRID ─────────────────────────────────────────────────── */
+.rakiz-bento-grid {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 320px 220px;
+  gap: 16px;
+  position: relative;
+}
+
+/* ─── BASE CARD ─────────────────────────────────────────────── */
+.magic-bento-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 1.5em;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--background-card);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: default;
+  box-shadow: 0 4px 20px rgba(0, 202, 115, 0.03), 0 2px 6px rgba(0, 0, 0, 0.01);
+
+  --glow-x: 50%;
+  --glow-y: 50%;
+  --glow-intensity: 0;
+  --glow-radius: 300px;
+  --glow-color: 0, 202, 115;
+}
+
+.magic-bento-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 202, 115, 0.08), 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+/* ─── GRID PLACEMENT ────────────────────────────────────────── */
+
+/* LEFT: Big hero (col 1, row 1) */
+.card-hero {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+/* LEFT: Smalls row (col 1, row 2) */
+.card-smalls-row {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.card-small {
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--background-card);
+  padding: 1.25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: default;
+  box-shadow: 0 4px 20px rgba(0, 202, 115, 0.03), 0 2px 6px rgba(0, 0, 0, 0.01);
+  --glow-x: 50%;
+  --glow-y: 50%;
+  --glow-intensity: 0;
+  --glow-radius: 300px;
+  --glow-color: 0, 202, 115;
+}
+
+.card-small:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 202, 115, 0.08), 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+/* RIGHT: Full tall (col 2, spans rows 1-2) */
+.card-right {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+/* ─── CARD INTERNALS ────────────────────────────────────────── */
+.magic-bento-card__header,
+.card-small__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.magic-bento-card__label,
+.card-small__label {
+  font-size: clamp(1.1rem, 2vw, 1.8rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: #0d1410;
+}
+
+.magic-bento-card__content,
+.card-small__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.magic-bento-card__title,
+.card-small__title {
+  font-weight: 700;
+  font-size: clamp(1.1rem, 1.8vw, 1.6rem);
+  color: #0d1410;
+  margin: 0 0 0.3em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.magic-bento-card__description,
+.card-small__description {
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(13, 20, 16, 0.6);
+  font-weight: 400;
+}
+
+.magic-bento-card__stat {
+  font-size: clamp(1rem, 1.8vw, 1.6rem);
+  font-weight: 800;
+  color: rgba(0, 202, 115, 1);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  margin-bottom: 0.15em;
+  font-family: 'neue-montreal', monospace;
+}
+
+.magic-bento-card__sublabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: rgba(13, 20, 16, 0.5);
+  font-weight: 600;
+}
+
+/* ─── BORDER GLOW ───────────────────────────────────────────── */
+.magic-bento-card--border-glow::after,
+.card-small--border-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: radial-gradient(
+    var(--glow-radius) circle at var(--glow-x) var(--glow-y),
+    rgba(var(--glow-color), calc(var(--glow-intensity) * 0.9)) 0%,
+    rgba(var(--glow-color), calc(var(--glow-intensity) * 0.4)) 30%,
+    transparent 60%
+  );
+  border-radius: inherit;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* ─── INNER GLOW ────────────────────────────────────────────── */
+.magic-bento-card--border-glow::before,
+.card-small--border-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    var(--glow-radius) circle at var(--glow-x) var(--glow-y),
+    rgba(var(--glow-color), calc(var(--glow-intensity) * 0.06)) 0%,
+    transparent 70%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* ─── PARTICLES ─────────────────────────────────────────────── */
+.particle-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ─── GLOBAL SPOTLIGHT ──────────────────────────────────────── */
+.global-spotlight {
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+  z-index: 200 !important;
+  pointer-events: none;
+}
+
+.bento-section {
+  position: relative;
+  user-select: none;
+}
+
+/* ─── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .rakiz-bento-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .card-hero { grid-column: 1 / span 2; grid-row: auto; min-height: 280px; }
+  .card-smalls-row { grid-column: 1 / span 2; grid-row: auto; }
+  .card-right { grid-column: 1 / span 2; grid-row: auto; min-height: 220px; }
+}
+
+@media (max-width: 640px) {
+  .rakiz-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .card-hero,
+  .card-right { grid-column: 1; }
+  .card-smalls-row { grid-template-columns: 1fr 1fr; }
+}

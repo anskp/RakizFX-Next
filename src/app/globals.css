@@ -1,26 +1,157 @@
+/* Primary: Neue Montreal (via Bunny Fonts) */
+@import url('https://fonts.bunny.net/css?family=neue-montreal:300,400,500,600,700,800&display=swap');
+/* Secondary: Open Sans (via Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Typography - Primary: Neue Montreal, Secondary: Open Sans */
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: "Cairo", sans-serif;
+  --font-montreal: "neue-montreal", "Neue Montreal", "Open Sans", sans-serif;
+  
+  /* Demo Theme Colors */
+  --color-em: #005645;
+  --color-emd: #003d32;
+  --color-eml: #007a60;
+  --color-nn: #00ca73;
+  --color-nnl: #33d68f;
+  --color-nnd: #00a35c;
+  --color-tx: #EFEFEF;
+  --color-txp: #fff;
+  --color-dk: #080c0a;
+  --color-dk2: #0e1512;
+  --color-dk3: #141e19;
+  --color-dk4: #1a2820;
+  --color-dk5: #213328;
+  --color-org: #f79720;
+  --color-red: #f05f41;
+  --color-pur: #5152a2;
+  --color-blu: #224193;
+  --color-btn: #85be5d;
+  --color-btnl: #9acc7a;
+  --color-lt: #f5f6f5;
+  --color-lt2: #eceeed;
+  --color-lt3: #e0e2e1;
+  --color-dt: #111;
+  --color-dt2: #333;
+  --color-dt3: #555;
+  --color-dt4: #777;
+
+  --color-primary: var(--color-nn);
+  --color-background: var(--color-dk);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  /* Body: Open Sans 14pt Regular */
+  body {
+    @apply font-sans antialiased bg-dk text-tx;
+    font-size: 14pt;
+    font-weight: 400;
+    line-height: 1.6;
   }
+
+  /* Headings: Neue Montreal */
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-montreal);
+    @apply tracking-tight;
+  }
+
+  /* H1 — 34pt Bold */
+  h1 {
+    font-size: 34pt;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  /* H2 — 22pt Medium */
+  h2 {
+    font-size: 22pt;
+    font-weight: 500;
+  }
+
+  /* H3 — 18pt Regular */
+  h3 {
+    font-size: 18pt;
+    font-weight: 400;
+  }
+
+  /* H4 / H5 — 16pt / 14pt Bold */
+  h4 {
+    font-size: 16pt;
+    font-weight: 700;
+  }
+
+  h5 {
+    font-size: 14pt;
+    font-weight: 700;
+  }
+
+  /* Arabic Font Support */
+  [lang="ar"] {
+    @apply font-arabic;
+  }
+
+  .font-arabic-bold { @apply font-arabic font-extrabold; }
+  .font-arabic-semibold { @apply font-arabic font-semibold; }
+  .font-arabic-medium { @apply font-arabic font-medium; }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.editorial-border {
+  @apply border-white/5;
+}
+
+.text-zinc-600 {
+  color: #71717a;
+}
+
+@layer components {
+  /* Layout & Containers */
+  .container-standard {
+    @apply max-w-[1400px] mx-auto px-6 lg:px-12 w-full;
+  }
+  .section-padding {
+    @apply py-20 md:py-24;
+  }
+
+  /* Typography System */
+  .text-h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl font-semibold leading-[0.9] tracking-tighter uppercase text-[#004D34];
+  }
+  .text-h2 {
+    @apply text-4xl md:text-5xl font-semibold leading-tight tracking-tight uppercase text-[#004D34];
+  }
+  .text-h3 {
+    @apply text-3xl md:text-4xl font-semibold leading-snug tracking-tight uppercase text-[#004D34];
+  }
+  .text-h4 {
+    @apply text-xl md:text-2xl font-semibold leading-relaxed tracking-tight text-[#004D34];
+  }
+  .text-body {
+    @apply text-base md:text-lg leading-relaxed max-w-3xl;
+  }
+  .text-muted {
+    @apply text-zinc-400 text-sm md:text-base leading-relaxed;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply bg-nn hover:bg-nnl text-dk font-bold px-6 py-3 text-[11px] uppercase tracking-[0.2em] rounded-xl transition-all shadow-[0_10px_20px_rgba(0,202,115,0.2)] hover:scale-105 hover:shadow-[0_15px_30px_rgba(0,202,115,0.3)] flex items-center justify-center gap-4 cursor-pointer;
+  }
+  .btn-secondary {
+    @apply bg-transparent border border-white/10 hover:bg-white/10 text-white font-bold px-6 py-3 text-[11px] uppercase tracking-[0.2em] rounded-xl transition-all flex items-center justify-center gap-4 cursor-pointer;
+  }
+
+  /* Theme Components */
+  .glass-card {
+    @apply bg-white/5 border border-white/5 rounded-[2rem] overflow-hidden shadow-2xl;
+  }
 }

@@ -1,0 +1,143 @@
+"use client";
+
+import React from 'react';
+import { motion } from 'motion/react';
+import { 
+  Building2, Shield, Users, Award, 
+  MapPin, CheckCircle, ArrowRight, Cpu 
+} from 'lucide-react';
+
+export default function CompanyPage() {
+  return (
+    <div className="bg-white text-zinc-900 min-h-screen">
+      
+      {/* 2. Core Corporate Values (LIGHT STYLE) */}
+      <section className="pt-40 pb-20 md:pb-24 bg-white">
+        <div className="container-standard">
+          
+          <div className="text-center mb-20">
+            <h2 className="text-h2 mb-6">
+              Built On <span className="text-primary font-normal italic">Solid Principles</span>
+            </h2>
+            <p className="text-zinc-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">
+              Our trading solutions are centered around security, latency optimization, and absolute clarity.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                icon: <Shield className="text-primary" size={24} />,
+                title: "Absolute Transparency",
+                desc: "Every transaction, custody pool, and overnight calculation is handled with strict accounting standards. Client assets are kept completely segregated at tier-1 custodial global banking groups, fully separated from corporate accounts."
+              },
+              {
+                icon: <Cpu className="text-primary" size={24} />,
+                title: "Engineered Performance",
+                desc: "We focus heavily on technical infrastructure. Our servers maintain high-speed fiber interlinkages to aggregate liquidity feeds directly from global LPs, allowing execution metrics to comfortably sit below the 40ms threshold."
+              },
+              {
+                icon: <Users className="text-primary" size={24} />,
+                title: "Institutional Custody",
+                desc: "Client funds are secured with deep multi-layer encryption architectures. We utilize leading regulatory protocols, negative balance safety nets, and strict withdrawal audits to protect active capital pools."
+              },
+              {
+                icon: <Award className="text-primary" size={24} />,
+                title: "Regulatory Standards",
+                desc: "Adhering to clean global financial guidelines and anti-money laundering policies. Our operations undergo routine third-party audits to secure and maintain institutional licensing compliance."
+              }
+            ].map((card, idx) => (
+              <div key={idx} className="bg-zinc-50/50 border border-zinc-200/80 rounded-[2.5rem] p-8 md:p-12 hover:border-primary/40 hover:bg-zinc-50 hover:shadow-lg transition-all group">
+                <h3 className="text-2xl font-bold uppercase tracking-tight text-zinc-900 mb-4">{card.title}</h3>
+                <p className="text-zinc-600 text-sm leading-relaxed">{card.desc}</p>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* 4. Global Locations (LIGHT STYLE) */}
+      <section id="contact" className="section-padding bg-[#f8fafc] border-t border-zinc-100">
+        <div className="container-standard">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-h2 mb-6">
+                Our Global <br/><span className="text-primary font-normal italic">Presence</span>
+              </h2>
+              <p className="text-zinc-600 text-base md:text-lg mb-8 leading-relaxed font-medium">
+                With corporate offices, support centers, and server nodes located across major global trading regions, we maintain low-latency connections and localized 24/7 service hubs.
+              </p>
+
+              <div className="space-y-4">
+                {[
+                  "Server centers in London (LD4) and New York (NY4)",
+                  "Customer experience and strategy desks in Singapore",
+                  "Algorithmic support networks in Tokyo",
+                  "Compliance audits based in Sydney"
+                ].map((loc, idx) => (
+                  <div key={idx} className="flex items-center gap-3 text-zinc-700">
+                    <CheckCircle className="text-primary shrink-0" size={16} />
+                    <span className="text-sm font-semibold">{loc}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Visual World Map Mock (LIGHT CARD SHADOW) */}
+            <div className="bg-white border border-zinc-200 shadow-xl rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden min-h-[300px] flex items-center justify-center">
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,255,120,0.05),transparent)] pointer-events-none" />
+              <div className="text-center relative z-10">
+                <div className="text-2xl font-black uppercase text-zinc-900 mb-4">Interlinked Latency Grid</div>
+                <div className="inline-flex items-center gap-3 bg-zinc-50 border border-zinc-200 px-4 py-2 rounded-full shadow-sm">
+                  <span className="w-2.5 h-2.5 rounded-full bg-primary animate-ping" />
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-zinc-600">LD4 Node Online</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 5. Careers Section (LIGHT STYLE) */}
+      <section id="careers" className="section-padding bg-white border-t border-zinc-100">
+        <div className="container-standard">
+          
+          <div className="text-center mb-20">
+            <h2 className="text-h2 mb-6">
+              Join Our <span className="text-primary font-normal italic">Innovators</span>
+            </h2>
+            <p className="text-zinc-500 text-lg md:text-xl font-medium max-w-3xl mx-auto">
+              We are constantly seeking outstanding compliance minds, network engineers, and client strategists to accelerate global infrastructure growth.
+            </p>
+          </div>
+
+          <div className="space-y-4 max-w-4xl mx-auto">
+            {[
+              { role: "Infrastructure Systems Engineer", dept: "Engineering / Server Ops", location: "London / Singapore" },
+              { role: "Institutional Account Executive", dept: "Desk Support / Strategy", location: "Tokyo / Sydney" },
+              { role: "Corporate Compliance Lead", dept: "Legal & Audits / Compliance", location: "Singapore" }
+            ].map((job, idx) => (
+              <div key={idx} className="bg-zinc-50 border border-zinc-200/80 rounded-2xl p-6 flex flex-wrap justify-between items-center hover:border-primary/40 hover:bg-zinc-50 hover:shadow-md transition-all cursor-pointer group">
+                <div>
+                  <h4 className="text-lg font-bold text-zinc-900 uppercase tracking-wider group-hover:text-primary transition-colors">{job.role}</h4>
+                  <div className="text-zinc-500 text-[10px] uppercase font-black tracking-widest mt-1">
+                    {job.dept} <span className="text-zinc-600 px-1.5">•</span> {job.location}
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-zinc-900 font-bold text-xs uppercase tracking-widest group-hover:text-primary transition-colors">
+                  <span>Apply Role</span>
+                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  );
+}

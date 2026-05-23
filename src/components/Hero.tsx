@@ -1,0 +1,95 @@
+"use client";
+import React from 'react';
+import { motion } from 'motion/react';
+import { ArrowRight } from 'lucide-react';
+
+export function Hero() {
+  return (
+    <section
+      className="relative min-h-screen flex items-center justify-start overflow-hidden"
+      style={{
+        backgroundImage: 'url(/assets/herohome.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-start text-left w-full max-w-2xl pl-14 md:pl-24 lg:pl-32">
+
+        {/* Headline */}
+        <h1
+          className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight uppercase leading-[0.95] mb-6 font-montreal text-[#0d1410]"
+        >
+          <span className="block mb-2">
+            {"TRADE".split("").map((letter, i) => (
+              <motion.span
+                key={i}
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: i * 0.05, type: "spring", stiffness: 150, damping: 25 }}
+                className="inline-block"
+              >
+                {letter}
+              </motion.span>
+            ))}
+          </span>
+          <span
+            className="block whitespace-nowrap text-[#004D34]"
+          >
+            {"BEYOND LIMITS".split("").map((letter, i) => (
+              <motion.span
+                key={i}
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.3 + i * 0.04, type: "spring", stiffness: 150, damping: 25 }}
+                className="inline-block whitespace-pre"
+              >
+                {letter}
+              </motion.span>
+            ))}
+          </span>
+        </h1>
+
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+          className="text-sm md:text-base lg:text-lg mb-10 max-w-2xl font-medium tracking-wide text-zinc-600"
+        >
+          Access 500+ global instruments with raw ECN spreads and ultra-fast execution.
+        </motion.p>
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 0.8 }}
+          className="flex flex-wrap justify-start gap-4"
+        >
+          <button
+            className="flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-widest shadow-lg transition hover:-translate-y-0.5"
+            style={{
+              background: 'oklch(0.62 0.18 165)',
+              color: '#fff',
+              boxShadow: '0 20px 50px -10px oklch(0.52 0.16 165 / 0.5)',
+            }}
+          >
+            Open Live Account <ArrowRight size={16} />
+          </button>
+          <button
+            className="rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-widest border transition hover:-translate-y-0.5 text-zinc-700"
+            style={{
+              borderColor: 'rgba(0,0,0,0.2)',
+              background: 'rgba(0,0,0,0.05)',
+            }}
+          >
+            View Markets
+          </button>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

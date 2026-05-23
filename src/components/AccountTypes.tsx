@@ -83,10 +83,13 @@ export function AccountTypes({ className }: { className?: string }) {
   return (
     <section id="accounts" className={`section-padding relative overflow-hidden ${className || 'bg-white'}`}>
       <div className="container-standard">
-        <div className="text-center mb-24">
+        <div className="text-center mb-16">
           <h2 className="text-h2 mb-4">
             Account Types
           </h2>
+          <p className="text-body text-zinc-500 max-w-2xl mx-auto">
+            Choose the perfect account type that matches your trading style, from beginner-friendly standard accounts to institutional-grade Elite conditions.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8 items-stretch max-w-7xl mx-auto">

@@ -36,7 +36,7 @@ export function CopyTrading() {
       <div className="container-standard relative z-10">
 
         {/* First: Centered Heading */}
-        <div className="text-center mb-0">
+        <div className="text-center mb-4 relative z-20">
           <h2 className="text-h2 mb-4 max-w-4xl mx-auto">
             Top Traders. <br />
             <span className="text-nn">Copy Their Profits.</span>
@@ -51,7 +51,7 @@ export function CopyTrading() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative max-w-6xl mx-auto -mt-24 -mb-28 flex justify-center lg:translate-x-12 md:translate-x-6 z-0 pointer-events-none"
+          className="relative max-w-6xl mx-auto -mt-10 -mb-4 flex justify-center lg:translate-x-12 md:translate-x-6 z-0 pointer-events-none"
         >
           <div className="relative z-10 w-full flex justify-center">
             <img

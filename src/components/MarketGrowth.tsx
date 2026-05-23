@@ -7,9 +7,12 @@ export function MarketGrowth() {
     <section id="platforms" className="section-padding bg-white overflow-hidden">
       <div className="container-standard">
         <div className="text-center mb-16 relative z-10">
-          <h2 className="text-h2 mb-6 tracking-tight uppercase leading-[0.85]">
+          <h2 className="text-h2 mb-4 tracking-tight uppercase leading-[0.85]">
             Invest in Top Assets
           </h2>
+          <p className="text-body text-zinc-500 max-w-2xl mx-auto">
+            Diversify your portfolio with direct access to top-performing assets, backed by real-time market data and professional trading tools.
+          </p>
         </div>
 
         {/* Promo Card */}

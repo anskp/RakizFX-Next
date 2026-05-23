@@ -74,10 +74,13 @@ export function Markets() {
   return (
     <section id="markets" className="section-padding bg-white flex flex-col items-center overflow-hidden relative">
       <div className="container-standard relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="text-h2 mb-6">
+        <div className="text-center mb-16">
+          <h2 className="text-h2 mb-4">
             Global Markets
           </h2>
+          <p className="text-body text-zinc-500 max-w-2xl mx-auto">
+            Trade forex, indices, commodities, and cryptocurrencies with tight spreads and deep liquidity on our award-winning platform.
+          </p>
         </div>
 
         {/* Interactive Bento Grid */}

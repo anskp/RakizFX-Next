@@ -184,10 +184,13 @@ export default function TradingPage() {
       {/* 2. Why Trade With Us */}
       <section id="benefits" className="py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-semibold mb-6 tracking-tight uppercase text-[#004D34]">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight uppercase text-[#004D34]">
               Why Trade With Us
             </h2>
+            <p className="max-w-2xl mx-auto text-zinc-600 text-base leading-relaxed">
+              Experience unparalleled trading conditions with our cutting-edge infrastructure, deep liquidity, and award-winning customer support designed for serious traders.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
@@ -264,10 +267,13 @@ export default function TradingPage() {
       {/* 3. Trading Overview Bento Grid */}
       <section id="markets" className="py-24 bg-white text-black border-b border-zinc-200">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-semibold mb-6 tracking-tight uppercase leading-[0.9] text-[#004D34]">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight uppercase leading-[0.9] text-[#004D34]">
               Trading Ecosystem
             </h2>
+            <p className="max-w-2xl mx-auto text-zinc-600 text-base leading-relaxed">
+              Access a comprehensive suite of financial instruments and professional tools within a single, unified environment built for performance.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">

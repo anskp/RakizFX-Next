@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, BarChart2, Boxes, LineChart, Users, BadgeDollarSign, Wallet, Monitor, Copy, Activity, Handshake, Percent, Building2, Headset, Briefcase } from 'lucide-react';
+import { Menu, X, BarChart2, Boxes, LineChart, Users, BadgeDollarSign, Wallet, Monitor, Copy, Activity, Handshake, Percent, Building2, Headset, Briefcase, User, LogIn, Search, Download } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface NavLink {
@@ -52,7 +52,7 @@ export function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === '/';
 
-  const isLightBgPage = pathname === '/' || pathname === '/partners' || pathname === '/company' || pathname === '/market' || pathname === '/trading';
+  const isLightBgPage = pathname === '/partners' || pathname === '/company' || pathname === '/market' || pathname === '/trading';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -175,18 +175,73 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Desktop CTA Buttons */}
-        <div className="hidden md:flex items-center gap-4">
-          <button className={cn(
-            "px-6 py-3 text-[11px] font-bold uppercase tracking-[0.2em] hover:text-primary border hover:border-primary rounded-xl transition-all cursor-pointer flex items-center justify-center",
-            (isScrolled || isLightBgPage)
-              ? "text-zinc-800 border-zinc-300 bg-white"
-              : "text-white border-white/20 bg-white/5 backdrop-blur-sm"
+        {/* Desktop CTA Buttons & Icons (Theme Styled) */}
+        <div className="hidden md:flex items-center gap-6">
+          {/* Register Button */}
+          <Link 
+            href="/register" 
+            className="flex items-center gap-2 group cursor-pointer transition-colors"
+          >
+            <div className={cn(
+              "w-8 h-8 rounded-full flex items-center justify-center transition-all",
+              (isScrolled || isLightBgPage)
+                ? "bg-[#004D34] text-white"
+                : "bg-[#00ca73] text-black"
+            )}>
+              <User size={16} strokeWidth={2.5} />
+            </div>
+            <span className={cn(
+              "text-sm font-bold tracking-wide transition-colors group-hover:text-primary",
+              (isScrolled || isLightBgPage) ? "text-[#004D34]" : "text-[#00ca73]"
+            )}>
+              Register
+            </span>
+          </Link>
+
+          {/* Login Button */}
+          <Link 
+            href="/login" 
+            className={cn(
+              "flex items-center gap-2 group cursor-pointer transition-colors hover:text-primary",
+              (isScrolled || isLightBgPage) ? "text-zinc-800" : "text-white"
+            )}
+          >
+            <LogIn size={20} className="transition-transform group-hover:translate-x-0.5" />
+            <span className="text-sm font-bold tracking-wide">
+              Login
+            </span>
+          </Link>
+
+          {/* Separator */}
+          <span className={cn(
+            "text-base select-none",
+            (isScrolled || isLightBgPage) ? "text-zinc-300" : "text-white/20"
           )}>
-            Sign In
+            |
+          </span>
+
+          {/* Language Selector */}
+          <button className={cn(
+            "text-xs font-bold tracking-widest hover:text-primary transition-colors cursor-pointer",
+            (isScrolled || isLightBgPage) ? "text-zinc-800" : "text-white"
+          )}>
+            EN
           </button>
-          <button className="bg-nn hover:bg-nnl text-dk px-6 py-3 text-[11px] font-bold uppercase tracking-[0.2em] rounded-xl transition-all cursor-pointer shadow-[0_5px_15px_rgba(0,202,115,0.2)] hover:scale-105">
-            Open Live Account
+
+          {/* Search Icon */}
+          <button className={cn(
+            "hover:text-primary transition-colors cursor-pointer",
+            (isScrolled || isLightBgPage) ? "text-zinc-800" : "text-white"
+          )}>
+            <Search size={20} strokeWidth={2} />
+          </button>
+
+          {/* Download Icon */}
+          <button className={cn(
+            "hover:text-primary transition-colors cursor-pointer",
+            (isScrolled || isLightBgPage) ? "text-zinc-800" : "text-white"
+          )}>
+            <Download size={20} strokeWidth={2} />
           </button>
         </div>
 
@@ -225,12 +280,22 @@ export function Navbar() {
               )
             ))}
             <hr className="border-zinc-200 my-2" />
-            <button className="w-full text-center py-3 text-zinc-700 font-semibold border border-zinc-300 rounded-xl hover:border-primary hover:text-primary transition-all">
-              Sign In
-            </button>
-            <button className="w-full bg-primary py-4 rounded-xl text-black font-bold flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(0,202,115,0.25)]">
-              Open Live Account
-            </button>
+            <Link 
+              href="/login" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full text-center py-3 text-zinc-700 font-semibold border border-zinc-300 rounded-xl hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-2"
+            >
+              <LogIn size={18} />
+              <span>Login</span>
+            </Link>
+            <Link 
+              href="/register"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full bg-primary py-4 rounded-xl text-black font-semibold flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(0,202,115,0.25)] hover:bg-[#00b365] transition-all"
+            >
+              <User size={18} />
+              <span>Register</span>
+            </Link>
           </div>
         </div>
       )}

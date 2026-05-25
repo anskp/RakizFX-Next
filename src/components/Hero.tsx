@@ -5,25 +5,27 @@ import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section
-      className="relative min-h-[70vh] md:min-h-screen flex items-center justify-start overflow-hidden"
-      style={{
-        backgroundImage: 'url(/assets/herohome.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
+    <section className="relative min-h-[70vh] md:min-h-screen flex items-center justify-start overflow-hidden bg-black">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none opacity-80 scale-[1.15]"
+      >
+        <source src="/assets/MwC_L&P_Script 4B_HighlightVideo.mp4" type="video/mp4" />
+      </video>
 
-      {/* Overlay for mobile readability */}
-      <div className="absolute inset-0 bg-white/60 md:bg-transparent pointer-events-none" />
+      {/* Dark premium overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-0 pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-start text-left w-full max-w-2xl px-6 md:pl-24 lg:pl-32">
+      <div className="relative z-10 flex flex-col items-start text-left w-full max-w-3xl px-6 md:pl-24 lg:pl-32">
 
         {/* Headline */}
         <h1
-          className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight uppercase leading-[0.95] mb-6 font-montreal text-[#0d1410]"
+          className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight uppercase leading-[0.95] mb-6 font-montreal text-white"
         >
           <span className="block mb-2">
             {"TRADE".split("").map((letter, i) => (
@@ -39,7 +41,7 @@ export function Hero() {
             ))}
           </span>
           <span
-            className="block whitespace-nowrap text-[#004D34]"
+            className="block whitespace-nowrap text-[#00ca73]"
           >
             {"BEYOND LIMITS".split("").map((letter, i) => (
               <motion.span
@@ -60,7 +62,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="text-sm md:text-base lg:text-lg mb-10 max-w-2xl font-medium tracking-wide text-zinc-600"
+          className="text-sm md:text-base lg:text-lg mb-10 max-w-2xl font-medium tracking-wide text-zinc-300"
         >
           Access 500+ global instruments with raw ECN spreads and ultra-fast execution.
         </motion.p>
@@ -72,10 +74,10 @@ export function Hero() {
           transition={{ delay: 1.5, duration: 0.8 }}
           className="flex flex-wrap justify-start gap-4"
         >
-          <button className="btn-primary rounded-xl px-8 py-3.5 flex items-center gap-2">
+          <button className="bg-[#00ca73] hover:bg-[#00b365] text-black font-bold rounded-xl px-8 py-3.5 flex items-center gap-2 transition-all hover:scale-105">
             Open Live Account <ArrowRight size={16} />
           </button>
-          <button className="rounded-xl px-8 py-3.5 text-sm font-bold uppercase tracking-widest border border-zinc-300 bg-white text-zinc-800 transition hover:bg-zinc-100 hover:-translate-y-0.5">
+          <button className="rounded-xl px-8 py-3.5 text-sm font-bold uppercase tracking-widest border border-white/20 bg-white/5 text-white backdrop-blur-sm transition hover:bg-white/10 hover:-translate-y-0.5">
             View Markets
           </button>
         </motion.div>

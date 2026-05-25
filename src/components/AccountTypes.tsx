@@ -121,10 +121,12 @@ export function AccountTypes({ className }: { className?: string }) {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ y: -8 }}
-                className={`relative overflow-hidden rounded-[3rem] p-8 md:p-10 flex flex-col justify-between transition-all duration-500 w-full shrink-0 snap-center min-w-[85vw] sm:min-w-[60vw] md:min-w-0 bg-gradient-to-b from-white to-white hover:from-[#CDEEDB] hover:to-white border ${
-                  acc.isPopular 
-                    ? 'border-[#004D34] shadow-[0_20px_50px_rgba(0,77,52,0.06)]' 
-                    : 'border-zinc-200/80 hover:border-[#CDEEDB]/60 shadow-[0_10px_30px_rgba(0,0,0,0.01)]'
+                className={`relative overflow-hidden rounded-[3rem] p-8 md:p-10 flex flex-col justify-between transition-all duration-500 w-full shrink-0 snap-center min-w-[85vw] sm:min-w-[60vw] md:min-w-0 shadow-sm border ${
+                  acc.isElite
+                    ? 'bg-[#0B1510] border-zinc-800/80 hover:shadow-[0_20px_45px_rgba(0,0,0,0.25)]'
+                    : acc.isPopular
+                      ? 'bg-[#F3FDF7] border-[#00ca73] hover:shadow-[0_20px_45px_rgba(0,202,115,0.06)]'
+                      : 'bg-white border-zinc-200/80 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)]'
                 }`}
               >
                 {/* Top Section */}
@@ -133,9 +135,11 @@ export function AccountTypes({ className }: { className?: string }) {
                     {/* Badge */}
                     {acc.badge && (
                       <span className={`font-black text-[9px] tracking-wider uppercase py-1 px-3 rounded-full inline-block ${
-                        acc.isPopular 
-                          ? 'bg-[#004D34] text-white' 
-                          : 'bg-[#CDEEDB] text-[#004D34]'
+                        acc.isElite
+                          ? 'bg-[#06180F] text-[#00ca73] border border-[#00ca73]/30'
+                          : acc.isPopular
+                            ? 'bg-[#00ca73] text-black shadow-[0_4px_12px_rgba(0,202,115,0.25)]'
+                            : 'bg-[#CDEEDB] text-[#004D34]'
                       }`}>
                         {acc.badge}
                       </span>
@@ -147,28 +151,28 @@ export function AccountTypes({ className }: { className?: string }) {
                     )}
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-black uppercase text-[#004D34] tracking-tight mb-3">
+                  <h3 className={`text-2xl md:text-3xl font-black uppercase tracking-tight mb-3 ${acc.isElite ? 'text-white' : 'text-[#004D34]'}`}>
                     {acc.title}
                   </h3>
 
-                  <p className="text-xs text-zinc-500 leading-relaxed mb-6 font-medium min-h-[40px]">
+                  <p className={`text-xs leading-relaxed mb-6 font-medium min-h-[40px] ${acc.isElite ? 'text-zinc-400' : 'text-zinc-500'}`}>
                     {acc.tagline}
                   </p>
 
                   {/* Price Block */}
-                  <div className="my-6 py-4 border-t border-b border-zinc-100/80 flex items-baseline gap-2">
-                    <span className="text-4xl md:text-5xl font-black text-[#004D34] font-mono tracking-tight">{acc.price}</span>
+                  <div className={`my-6 py-4 border-t border-b flex items-baseline gap-2 ${acc.isElite ? 'border-zinc-800' : 'border-zinc-100/80'}`}>
+                    <span className={`text-4xl md:text-5xl font-black font-mono tracking-tight ${acc.isElite ? 'text-white' : 'text-[#004D34]'}`}>{acc.price}</span>
                     <span className="text-zinc-400 text-[10px] font-black uppercase tracking-wider">{acc.priceLabel}</span>
                   </div>
 
                   {/* Specifications List */}
                   <div className="flex flex-col gap-4 mb-10">
                     {acc.details.map((d, idx) => (
-                      <div key={idx} className="flex justify-between items-center w-full py-2 border-b border-zinc-100 last:border-0">
+                      <div key={idx} className={`flex justify-between items-center w-full py-2 border-b last:border-0 ${acc.isElite ? 'border-zinc-800' : 'border-zinc-100'}`}>
                         <span className="text-[9px] font-black uppercase tracking-wider text-zinc-400">
                           {d.label}
                         </span>
-                        <span className="text-[10px] md:text-[11px] font-extrabold text-[#004D34] text-right">
+                        <span className={`text-[10px] md:text-[11px] font-extrabold text-right ${acc.isElite ? 'text-white' : 'text-[#004D34]'}`}>
                           {d.value}
                         </span>
                       </div>
@@ -178,8 +182,8 @@ export function AccountTypes({ className }: { className?: string }) {
 
                 {/* Bottom Action Button */}
                 <div>
-                  {acc.isPopular ? (
-                    <button className="w-full bg-[#004D34] hover:bg-[#00ca73] hover:text-black text-white font-extrabold py-4 px-6 rounded-2xl text-xs uppercase tracking-widest transition-all shadow-[0_10px_20px_rgba(0,77,52,0.15)] cursor-pointer">
+                  {acc.isElite || acc.isPopular ? (
+                    <button className="w-full bg-[#00ca73] hover:bg-[#00b064] text-black font-extrabold py-4 px-6 rounded-2xl text-xs uppercase tracking-widest transition-all shadow-[0_6px_20px_rgba(0,202,115,0.2)] cursor-pointer">
                       {acc.buttonText}
                     </button>
                   ) : (

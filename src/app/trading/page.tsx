@@ -195,16 +195,17 @@ export default function TradingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
             {/* Large Feature 1 */}
-            <div className="md:col-span-8 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-zinc-900 group flex flex-col justify-end min-h-[280px] md:min-h-[400px]">
+            <div className="md:col-span-8 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-zinc-900 group flex flex-col items-center text-center justify-center p-10 md:p-12 min-h-[320px] md:min-h-[400px]">
               <div className="absolute inset-0 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=1200&q=80" 
                   alt="Precision Execution" 
-                  className="w-full h-full object-cover opacity-50 group-hover:scale-105 group-hover:opacity-40 transition-all duration-700" 
+                  className="w-full h-full object-cover opacity-30 group-hover:scale-105 group-hover:opacity-20 transition-all duration-700" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-black/50" />
               </div>
-              <div className="relative z-10 p-10 md:p-12">
+              <div className="relative z-10 flex flex-col items-center">
+                <Activity size={72} strokeWidth={1.5} className="text-primary mb-6 drop-shadow-lg" />
                 <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-white mb-4">
                   Precision <span className="text-primary font-normal italic">Execution</span>
                 </h3>
@@ -215,48 +216,43 @@ export default function TradingPage() {
             </div>
 
             {/* Medium Feature 1 */}
-            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-white to-zinc-50 group p-8 md:p-12 flex flex-col justify-between min-h-[280px] md:min-h-[400px]">
-              <div>
-                <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 text-black group-hover:text-primary group-hover:bg-primary/10 transition-colors">
-                  <Shield size={24} />
-                </div>
+            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-white to-zinc-50 group p-8 md:p-12 flex flex-col items-center justify-center text-center min-h-[320px] md:min-h-[400px] border border-zinc-200 shadow-sm">
+              <div className="relative z-10 flex flex-col items-center">
+                <Layers size={72} strokeWidth={1.5} className="text-[#004D34] mb-6 group-hover:text-primary transition-colors" />
                 <h3 className="text-2xl font-black uppercase tracking-tight text-black mb-4">Multi-Asset <br/>Markets</h3>
-                <p className="text-zinc-600 text-sm font-medium leading-relaxed">
+                <p className="text-zinc-600 text-sm font-medium leading-relaxed max-w-[250px]">
                   Trade forex, crypto, equities, commodities, indices, and ETFs through one ecosystem.
                 </p>
-              </div>
-              <div className="mt-8">
-                <div className="h-1.5 w-full bg-zinc-200 rounded-full overflow-hidden">
-                  <div className="h-full bg-primary w-full rounded-full" />
-                </div>
-                <div className="text-[10px] font-black uppercase tracking-widest text-zinc-400 mt-3 text-right">Market Access</div>
               </div>
             </div>
 
             {/* Medium Feature 2 */}
-            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-[#121212] group p-8 md:p-10 flex flex-col justify-between min-h-[220px] md:min-h-[350px]">
-              <div className="relative z-10">
+            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-[#121212] group p-8 md:p-10 flex flex-col items-center justify-center text-center min-h-[260px] md:min-h-[350px]">
+              <div className="relative z-10 flex flex-col items-center">
+                <Smartphone size={72} strokeWidth={1.5} className="text-white mb-6 group-hover:text-primary transition-colors" />
                 <h3 className="text-2xl font-black uppercase tracking-tight text-white mb-3">Professional Platforms</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">
+                <p className="text-zinc-400 text-sm leading-relaxed max-w-[250px]">
                   MT4, MT5, TradingView, WebTrader, and mobile trading environments.
                 </p>
               </div>
             </div>
 
             {/* Medium Feature 3 */}
-            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-[#eafaf1] to-white group p-8 md:p-10 flex flex-col justify-between min-h-[220px] md:min-h-[350px]">
-              <div className="relative z-10">
+            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-[#eafaf1] to-white group p-8 md:p-10 flex flex-col items-center justify-center text-center min-h-[260px] md:min-h-[350px] border border-[#CDEEDB]/60">
+              <div className="relative z-10 flex flex-col items-center">
+                <Shield size={72} strokeWidth={1.5} className="text-[#004D34] mb-6 group-hover:scale-110 transition-transform" />
                 <h3 className="text-2xl font-black uppercase tracking-tight text-[#004D34] mb-3">Capital Protection</h3>
-                <p className="text-[#004D34]/70 text-sm font-medium leading-relaxed">
+                <p className="text-[#004D34]/80 text-sm font-medium leading-relaxed max-w-[250px]">
                   Enterprise-grade security, segregated client funds, and multi-layer compliance systems.
                 </p>
               </div>
             </div>
 
             {/* Medium Feature 4 */}
-            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-white group flex flex-col justify-center items-center text-center p-8 md:p-10 min-h-[220px] md:min-h-[350px] hover:shadow-xl transition-all border border-zinc-100">
+            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-white group flex flex-col items-center justify-center text-center p-8 md:p-10 min-h-[260px] md:min-h-[350px] hover:shadow-xl transition-all border border-zinc-200 shadow-sm">
+              <Globe size={72} strokeWidth={1.5} className="text-black mb-6 group-hover:text-primary transition-colors" />
               <h3 className="text-xl font-black uppercase tracking-tight text-black mb-3">Global Funding Rails</h3>
-              <p className="text-zinc-500 text-sm px-4 leading-relaxed">
+              <p className="text-zinc-500 text-sm leading-relaxed max-w-[250px]">
                 Fast deposits and withdrawals through banking, cards, crypto, and regional payment networks.
               </p>
             </div>

@@ -51,15 +51,13 @@ export function CopyTrading() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative max-w-6xl mx-auto md:-mt-10 md:-mb-4 flex justify-center lg:translate-x-12 md:translate-x-6 z-0 pointer-events-none"
+          className="w-full flex justify-center items-center z-0 pointer-events-none md:-mt-10 md:-mb-4 relative px-4"
         >
-          <div className="relative z-10 w-full flex justify-center">
-            <img
-              src="/assets/Frame 2.png"
-              alt="Copy Trading Terminal"
-              className="max-w-5xl w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)] md:drop-shadow-[0_30px_60px_rgba(0,0,0,0.15)]"
-            />
-          </div>
+          <img
+            src="/assets/Frame 2.png"
+            alt="Copy Trading Terminal"
+            className="max-w-[100%] sm:max-w-4xl md:max-w-5xl h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)] md:drop-shadow-[0_30px_60px_rgba(0,0,0,0.15)]"
+          />
         </motion.div>
 
         {/* Third: Trader Cards */}

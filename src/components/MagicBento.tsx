@@ -245,7 +245,18 @@ export default function MagicBento({ noPadding = false }: { noPadding?: boolean 
 
         {/* ── RIGHT TALL: Crypto ── */}
         <ParticleCard className={`${cardClass} card-right`} disabled={disabled}>
-          <img src="/assets/cryptocoins01.png" className="absolute inset-0 m-auto w-[90%] h-[90%] object-contain z-0" alt="Crypto" />
+          <img 
+            src="/assets/cryptocoins01.png" 
+            className="absolute top-0 bottom-0 object-contain z-0 crypto-image pointer-events-none" 
+            style={{ 
+              width: isMobile ? '55%' : '90%', 
+              height: '90%',
+              right: isMobile ? '-4%' : '50%', 
+              transform: isMobile ? 'none' : 'translateX(50%)', 
+              margin: isMobile ? 'auto 0' : 'auto' 
+            }} 
+            alt="Crypto" 
+          />
           
           <div className="absolute left-6 top-6 z-10 text-left">
             <div className="text-lg md:text-2xl font-black uppercase tracking-tight text-[#0d1410] leading-none">
@@ -256,7 +267,7 @@ export default function MagicBento({ noPadding = false }: { noPadding?: boolean 
             </div>
           </div>
 
-          <div className="absolute left-6 bottom-6 z-10 text-left max-w-[85%]">
+          <div className="absolute left-6 bottom-6 z-10 text-left" style={{ maxWidth: isMobile ? '45%' : '85%' }}>
             <div className="text-[10px] font-black uppercase tracking-widest text-[#00ca73] mb-1">
               Next-Gen Liquidity
             </div>

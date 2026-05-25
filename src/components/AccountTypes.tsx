@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 
 interface AccountConfig {
@@ -80,10 +80,19 @@ export function AccountTypes({ className }: { className?: string }) {
     }
   ];
 
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const scrollLeft = e.currentTarget.scrollLeft;
+    const width = e.currentTarget.offsetWidth;
+    const index = Math.round(scrollLeft / width);
+    setActiveIndex(index);
+  };
+
   return (
     <section id="accounts" className={`section-padding relative overflow-hidden ${className || 'bg-white'}`}>
       <div className="container-standard">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="text-h2 mb-4">
             Account Types
           </h2>
@@ -92,7 +101,17 @@ export function AccountTypes({ className }: { className?: string }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8 items-stretch max-w-7xl mx-auto">
+        {/* Mobile Pagination Indicator */}
+        <div className="flex md:hidden justify-center items-center gap-2 mb-6">
+          {accountsData.map((_, i) => (
+            <div key={i} className={`h-2 rounded-full transition-all duration-300 ${activeIndex === i ? 'w-6 bg-[#004D34]' : 'w-2 bg-zinc-300'}`} />
+          ))}
+        </div>
+
+        <div 
+          className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-3 gap-6 md:gap-8 lg:gap-8 items-stretch max-w-7xl mx-auto pb-8 md:pb-0 hide-scrollbar px-4 md:px-0"
+          onScroll={handleScroll}
+        >
           {accountsData.map((acc, index) => {
             return (
               <motion.div
@@ -102,7 +121,7 @@ export function AccountTypes({ className }: { className?: string }) {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ y: -8 }}
-                className={`relative overflow-hidden rounded-[3rem] p-8 md:p-10 flex flex-col justify-between transition-all duration-500 w-full bg-gradient-to-b from-white to-white hover:from-[#CDEEDB] hover:to-white border ${
+                className={`relative overflow-hidden rounded-[3rem] p-8 md:p-10 flex flex-col justify-between transition-all duration-500 w-full shrink-0 snap-center min-w-[85vw] sm:min-w-[60vw] md:min-w-0 bg-gradient-to-b from-white to-white hover:from-[#CDEEDB] hover:to-white border ${
                   acc.isPopular 
                     ? 'border-[#004D34] shadow-[0_20px_50px_rgba(0,77,52,0.06)]' 
                     : 'border-zinc-200/80 hover:border-[#CDEEDB]/60 shadow-[0_10px_30px_rgba(0,0,0,0.01)]'

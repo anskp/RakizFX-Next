@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import { 
   LineChart, Building2, Activity, BarChart2, Boxes, Briefcase, 
-  CheckCircle
+  CheckCircle, Minimize2, BadgePercent, Hourglass, Waypoints
 } from 'lucide-react';
 import { LiveMarketChart } from '@/components/LiveMarketChart';
 
@@ -173,7 +173,7 @@ export default function MarketPage() {
       {/* 1. Hero Section */}
       <section id="overview" className="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden text-black min-h-[70vh] md:min-h-screen flex items-center">
         <div className="absolute inset-0 z-0">
-          <img src="/assets/herooo.png" alt="Market Hero Background" className="w-full h-full object-cover object-right md:object-center" />
+          <img src="/assets/herooo.png" alt="Market Hero Background" className="w-full h-full object-cover object-center md:object-right" />
         </div>
         {/* Gradient: semi-transparent overlay on mobile, fades on desktop */}
         <div className="absolute inset-0 bg-white/40 md:bg-gradient-to-r md:from-white/90 md:via-white/50 md:to-transparent pointer-events-none" />
@@ -268,15 +268,15 @@ export default function MarketPage() {
 
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { title: 'Spreads', desc: 'Ultra-low spreads starting from 0.0 pips across major trading instruments.' },
-                { title: 'Commissions', desc: 'Extremely competitive commission structures on raw-spread accounts from just $1.5.' },
-                { title: 'Overnight Swaps', desc: 'Clear, transparent swap costs computed directly inside the platform.' },
-                { title: 'Currency Conversion', desc: 'Transparent conversion rates with minimal margins applied on trades.' }
+                { title: 'Spreads', desc: 'Ultra-low spreads starting from 0.0 pips across major trading instruments.', icon: <Minimize2 size={48} strokeWidth={1.25} /> },
+                { title: 'Commissions', desc: 'Extremely competitive commission structures on raw-spread accounts from just $1.5.', icon: <BadgePercent size={48} strokeWidth={1.25} /> },
+                { title: 'Overnight Swaps', desc: 'Clear, transparent swap costs computed directly inside the platform.', icon: <Hourglass size={48} strokeWidth={1.25} /> },
+                { title: 'Currency Conversion', desc: 'Transparent conversion rates with minimal margins applied on trades.', icon: <Waypoints size={48} strokeWidth={1.25} /> }
               ].map((fee, idx) => (
-                <div key={idx} className="bg-white border border-zinc-200 rounded-3xl p-8 relative overflow-hidden shadow-sm">
-                  <div className="text-primary font-black text-3xl mb-4 font-mono">0{idx + 1}</div>
-                  <h4 className="text-lg font-black uppercase tracking-tight text-black mb-2">{fee.title}</h4>
-                  <p className="text-zinc-600 text-xs leading-relaxed">{fee.desc}</p>
+                <div key={idx} className="bg-white border border-zinc-200 rounded-3xl p-8 relative overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col items-center text-center justify-center">
+                  <div className="text-black mb-6 group-hover:scale-110 transition-transform">{fee.icon}</div>
+                  <h4 className="text-lg font-black uppercase tracking-tight text-black mb-3">{fee.title}</h4>
+                  <p className="text-zinc-600 text-sm leading-relaxed">{fee.desc}</p>
                 </div>
               ))}
             </div>

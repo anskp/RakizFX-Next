@@ -167,29 +167,30 @@ export default function PartnersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: <Award className="text-primary" size={24} />,
+                icon: <Award size={48} strokeWidth={1.25} />,
                 title: "Leading Reputation",
                 desc: "Partner with a highly trusted multi-asset broker. Premium security standards and operational transparency."
               },
               {
-                icon: <TrendingUp className="text-primary" size={24} />,
+                icon: <TrendingUp size={48} strokeWidth={1.25} />,
                 title: "Flexible Rebate Schemes",
                 desc: "Bespoke commission systems custom-tailored to suit different client strategies and referrers' business plans."
               },
               {
-                icon: <BarChart3 className="text-primary" size={24} />,
+                icon: <BarChart3 size={48} strokeWidth={1.25} />,
                 title: "Premium Reporting",
                 desc: "Fully detailed analytical panels to trace click conversions, active deposits, volume generated, and commissions."
               },
               {
-                icon: <Users className="text-primary" size={24} />,
+                icon: <Users size={48} strokeWidth={1.25} />,
                 title: "Dedicated Support Team",
                 desc: "Experienced individual partner advisors available 24/7 to support campaigns and operational demands."
               }
             ].map((card, idx) => (
-              <div key={idx} className="bg-zinc-50/50 border border-zinc-200/80 rounded-3xl p-6 hover:bg-zinc-50 hover:border-primary/40 hover:shadow-md transition-all duration-300">
-                <h3 className="text-lg font-bold uppercase tracking-tight text-zinc-900 mb-2">{card.title}</h3>
-                <p className="text-zinc-600 text-xs leading-relaxed">{card.desc}</p>
+              <div key={idx} className="bg-zinc-50/50 border border-zinc-200/80 rounded-3xl p-8 hover:bg-zinc-50 hover:border-primary/40 hover:shadow-md transition-all duration-300 group flex flex-col items-center justify-center text-center">
+                <div className="text-black mb-6 group-hover:scale-110 transition-transform">{card.icon}</div>
+                <h3 className="text-lg font-bold uppercase tracking-tight text-zinc-900 mb-3">{card.title}</h3>
+                <p className="text-zinc-600 text-sm leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>

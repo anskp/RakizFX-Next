@@ -10,7 +10,7 @@ export function Hero() {
       style={{
         backgroundImage: 'url(/assets/herohome.png)',
         backgroundSize: 'cover',
-        backgroundPosition: 'right center',
+        backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
       }}
     >
@@ -72,23 +72,10 @@ export function Hero() {
           transition={{ delay: 1.5, duration: 0.8 }}
           className="flex flex-wrap justify-start gap-4"
         >
-          <button
-            className="flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-widest shadow-lg transition hover:-translate-y-0.5"
-            style={{
-              background: 'oklch(0.62 0.18 165)',
-              color: '#fff',
-              boxShadow: '0 20px 50px -10px oklch(0.52 0.16 165 / 0.5)',
-            }}
-          >
+          <button className="btn-primary rounded-xl px-8 py-3.5 flex items-center gap-2">
             Open Live Account <ArrowRight size={16} />
           </button>
-          <button
-            className="rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-widest border transition hover:-translate-y-0.5 text-zinc-700"
-            style={{
-              borderColor: 'rgba(0,0,0,0.2)',
-              background: 'rgba(0,0,0,0.05)',
-            }}
-          >
+          <button className="rounded-xl px-8 py-3.5 text-sm font-bold uppercase tracking-widest border border-zinc-300 bg-white text-zinc-800 transition hover:bg-zinc-100 hover:-translate-y-0.5">
             View Markets
           </button>
         </motion.div>

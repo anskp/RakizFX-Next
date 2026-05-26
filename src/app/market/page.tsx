@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import { 
   LineChart, Building2, Activity, BarChart2, Boxes, Briefcase, 
-  CheckCircle, Minimize2, BadgePercent, Hourglass, Waypoints
+  CheckCircle
 } from 'lucide-react';
 import { LiveMarketChart } from '@/components/LiveMarketChart';
 import { TradingViewMarkets } from '@/components/TradingViewMarkets';
@@ -271,13 +271,15 @@ export default function MarketPage() {
 
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { title: 'Spreads', desc: 'Ultra-low spreads starting from 0.0 pips across major trading instruments.', icon: <Minimize2 size={48} strokeWidth={1.25} /> },
-                { title: 'Commissions', desc: 'Extremely competitive commission structures on raw-spread accounts from just $1.5.', icon: <BadgePercent size={48} strokeWidth={1.25} /> },
-                { title: 'Overnight Swaps', desc: 'Clear, transparent swap costs computed directly inside the platform.', icon: <Hourglass size={48} strokeWidth={1.25} /> },
-                { title: 'Currency Conversion', desc: 'Transparent conversion rates with minimal margins applied on trades.', icon: <Waypoints size={48} strokeWidth={1.25} /> }
+                { title: 'Spreads', desc: 'Ultra-low spreads starting from 0.0 pips across major trading instruments.', icon: "/icons/Spreads.png" },
+                { title: 'Commissions', desc: 'Extremely competitive commission structures on raw-spread accounts from just $1.5.', icon: "/icons/Commissions.png" },
+                { title: 'Overnight Swaps', desc: 'Clear, transparent swap costs computed directly inside the platform.', icon: "/icons/Overnight Swaps.png" },
+                { title: 'Currency Conversion', desc: 'Transparent conversion rates with minimal margins applied on trades.', icon: "/icons/conversion.png" }
               ].map((fee, idx) => (
                 <div key={idx} className="bg-white border border-zinc-200 rounded-3xl p-8 relative overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col items-center text-center justify-center">
-                  <div className="text-black mb-6 group-hover:scale-110 transition-transform">{fee.icon}</div>
+                  <div className="mb-6 group-hover:scale-110 transition-transform">
+                    <img src={fee.icon} alt={fee.title} className="w-24 h-24 object-contain" />
+                  </div>
                   <h4 className="text-lg font-black uppercase tracking-tight text-black mb-3">{fee.title}</h4>
                   <p className="text-zinc-600 text-sm leading-relaxed">{fee.desc}</p>
                 </div>

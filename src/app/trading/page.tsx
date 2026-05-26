@@ -205,7 +205,9 @@ export default function TradingPage() {
                 <div className="absolute inset-0 bg-black/50" />
               </div>
               <div className="relative z-10 flex flex-col items-center">
-                <Activity size={72} strokeWidth={1.5} className="text-primary mb-6 drop-shadow-lg" />
+                <div className="mb-6 group-hover:scale-110 transition-transform">
+                  <img src="/icons/Precision_Execution.png" alt="Precision Execution" className="w-28 h-28 object-contain" />
+                </div>
                 <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4 bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
                   Precision <span className="font-normal italic">Execution</span>
                 </h3>
@@ -218,7 +220,9 @@ export default function TradingPage() {
             {/* Medium Feature 1 */}
             <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-white to-zinc-50 group p-8 md:p-12 flex flex-col items-center justify-center text-center min-h-[320px] md:min-h-[400px] border border-zinc-200 shadow-sm">
               <div className="relative z-10 flex flex-col items-center">
-                <Layers size={72} strokeWidth={1.5} className="text-[#004D34] mb-6 group-hover:text-primary transition-colors" />
+                <div className="mb-6 group-hover:scale-110 transition-transform">
+                  <img src="/icons/Multi-Asset_Markets.png" alt="Multi-Asset Markets" className="w-28 h-28 object-contain" />
+                </div>
                 <h3 className="text-2xl font-black uppercase tracking-tight mb-4 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal font-black">Multi-Asset <br/>Markets</h3>
                 <p className="text-zinc-600 text-sm font-medium leading-relaxed max-w-[250px] font-sans">
                   Trade forex, crypto, equities, commodities, indices, and ETFs through one ecosystem.
@@ -229,10 +233,12 @@ export default function TradingPage() {
             {/* Medium Feature 2 */}
             <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-[#121212] group p-8 md:p-10 flex flex-col items-center justify-center text-center min-h-[260px] md:min-h-[350px]">
               <div className="relative z-10 flex flex-col items-center">
-                <Smartphone size={72} strokeWidth={1.5} className="text-white mb-6 group-hover:text-primary transition-colors" />
+                <div className="mb-6 group-hover:scale-110 transition-transform">
+                  <img src="/icons/Professional_Platforms.png" alt="Professional Platforms" className="w-28 h-28 object-contain" />
+                </div>
                 <h3 className="text-2xl font-black uppercase tracking-tight mb-3 bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">Professional Platforms</h3>
                 <p className="text-zinc-400 text-sm leading-relaxed max-w-[250px] font-sans">
-                  MT4, MT5, TradingView, WebTrader, and mobile trading environments.
+                  MT4, mt5, TradingView, WebTrader, and mobile trading environments.
                 </p>
               </div>
             </div>
@@ -240,7 +246,9 @@ export default function TradingPage() {
             {/* Medium Feature 3 */}
             <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-[#eafaf1] to-white group p-8 md:p-10 flex flex-col items-center justify-center text-center min-h-[260px] md:min-h-[350px] border border-[#CDEEDB]/60">
               <div className="relative z-10 flex flex-col items-center">
-                <Shield size={72} strokeWidth={1.5} className="text-[#004D34] mb-6 group-hover:scale-110 transition-transform" />
+                <div className="mb-6 group-hover:scale-110 transition-transform">
+                  <img src="/icons/Capital_Protection.png" alt="Capital Protection" className="w-28 h-28 object-contain" />
+                </div>
                 <h3 className="text-2xl font-black uppercase tracking-tight mb-3 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal font-black">Capital Protection</h3>
                 <p className="text-[#004D34]/80 text-sm font-medium leading-relaxed max-w-[250px] font-sans">
                   Enterprise-grade security, segregated client funds, and multi-layer compliance systems.
@@ -250,7 +258,9 @@ export default function TradingPage() {
 
             {/* Medium Feature 4 */}
             <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-white group flex flex-col items-center justify-center text-center p-8 md:p-10 min-h-[260px] md:min-h-[350px] hover:shadow-xl transition-all border border-zinc-200 shadow-sm">
-              <Globe size={72} strokeWidth={1.5} className="text-black mb-6 group-hover:text-primary transition-colors" />
+              <div className="mb-6 group-hover:scale-110 transition-transform">
+                <img src="/icons/Global_Funding_Rails.png" alt="Global Funding Rails" className="w-28 h-28 object-contain" />
+              </div>
               <h3 className="text-xl font-black uppercase tracking-tight mb-3 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">Global Funding Rails</h3>
               <p className="text-zinc-500 text-sm leading-relaxed max-w-[250px] font-sans">
                 Fast deposits and withdrawals through banking, cards, crypto, and regional payment networks.

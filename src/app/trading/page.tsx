@@ -386,7 +386,7 @@ export default function TradingPage() {
       </section>
 
       {/* 6. Social Trading Section */}
-      <TradingCopySection />
+      {/* <TradingCopySection /> */}
 
       {/* 7. Security Section */}
       <section id="security" className="pt-20 pb-10 relative overflow-hidden bg-white text-black border-t border-zinc-200">

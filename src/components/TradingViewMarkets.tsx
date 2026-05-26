@@ -22,7 +22,7 @@ export function TradingViewMarkets() {
       "showChart": true,
       "locale": "en",
       "width": "100%",
-      "height": 660,
+      "height": 550,
       "largeChartUrl": "",
       "isTransparent": false,
       "showSymbolLogo": true,
@@ -79,29 +79,49 @@ export function TradingViewMarkets() {
   }, []);
 
   return (
-    <section className="section-padding bg-white relative overflow-hidden">
-      <div className="container-standard relative z-10">
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end gap-8 mb-16 text-center lg:text-left">
-          <div className="max-w-3xl">
-            <h2 className="text-h2 mb-6 mt-2">
-              Every market is <br/>
-              waiting for you
-            </h2>
-            <p className="text-body text-zinc-500">
-              Institutional-grade pricing and analysis powered by TradingView. Access over 500+ instruments with millisecond-perfect execution protocols.
-            </p>
+    <section className="py-24 bg-white relative overflow-hidden border-t border-zinc-200">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Left Text */}
+          <div className="lg:col-span-5 flex flex-col justify-center text-left relative z-20">
+            <motion.div
+              initial={{ opacity: 0, x: -25 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-[#00ca73] text-[10px] font-black uppercase tracking-[0.3em] block mb-3">
+                Live Pricing Rails
+              </span>
+              <h2 className="text-h2 mb-6 uppercase">
+                Every market is <br/>
+                <span className="font-normal italic">waiting for you</span>
+              </h2>
+              <p className="text-zinc-600 text-base md:text-lg mb-10 leading-relaxed font-medium">
+                Institutional-grade pricing and analysis powered by TradingView. Access over 500+ instruments with millisecond-perfect execution protocols and sub-10ms latency.
+              </p>
+              <button className="bg-black text-white px-8 py-5 text-xs uppercase font-bold tracking-widest hover:bg-primary hover:text-black transition-all flex items-center gap-3 rounded-xl shadow-md group cursor-pointer self-start">
+                Explore All Asset Groups <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </button>
+            </motion.div>
           </div>
-          <button className="bg-zinc-100 border border-zinc-200 text-zinc-800 px-10 py-5 text-[12px] uppercase font-bold tracking-[0.3em] hover:bg-primary hover:text-black hover:border-primary transition-all flex items-center gap-4 rounded-xl shadow-sm hover:shadow-[0_10px_20px_rgba(0,202,115,0.2)] group cursor-pointer mx-auto lg:mx-0">
-             Explore All Asset Groups <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </button>
-        </div>
 
-        <div className="relative w-full">
-          <div className="absolute -top-10 right-0 z-10">
-            <span className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest">Indicative Pricing Only</span>
-          </div>
-          <div className="tradingview-widget-container w-full" ref={containerRef}>
-            <div className="tradingview-widget-container__widget"></div>
+          {/* Right Chart */}
+          <div className="lg:col-span-7 w-full relative z-20">
+            <div className="absolute -top-6 right-2 z-30">
+              <span className="text-[9px] text-zinc-400 font-bold uppercase tracking-widest bg-white px-2 py-0.5 rounded shadow-sm border border-zinc-100">Indicative Pricing Only</span>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white rounded-3xl border border-zinc-200 shadow-xl overflow-hidden p-1 relative w-full"
+            >
+              <div className="tradingview-widget-container w-full rounded-2xl overflow-hidden" ref={containerRef}>
+                <div className="tradingview-widget-container__widget"></div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

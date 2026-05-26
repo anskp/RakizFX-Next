@@ -27,13 +27,11 @@ export function AccountTypes({ className }: { className?: string }) {
       priceLabel: 'minimum deposit',
       isPopular: false,
       details: [
-        { label: 'Spread', value: 'Standard spreads' },
+        { label: 'Spread', value: 'Standard' },
         { label: 'Leverage', value: 'Up to 1:400' },
-        { label: 'Commission', value: 'Zero commission on trades' },
-        { label: 'Swap-free', value: 'Adjustable swap-free option' },
-        { label: 'Funding', value: 'Instant deposit & faster withdrawal' },
-        { label: 'Platform', value: 'MetaTrader 5' },
-        { label: 'Support', value: '24/7 technical support' }
+        { label: 'Commission', value: 'Zero' },
+        { label: 'Swap-free', value: 'Adjustable' },
+        { label: 'Support', value: '24/7 Technical' }
       ],
       buttonText: 'Open Standard'
     },
@@ -42,18 +40,16 @@ export function AccountTypes({ className }: { className?: string }) {
       badge: 'POPULAR',
       subBadge: 'Best for regular traders',
       title: 'Pro',
-      tagline: 'Faster execution, priority support and advanced trading conditions.',
+      tagline: 'Faster execution, priority support and advanced conditions.',
       price: '$200',
       priceLabel: 'minimum deposit',
       isPopular: true,
       details: [
-        { label: 'Spread', value: 'Low, competitive spreads' },
+        { label: 'Spread', value: 'From 0.6 pips' },
         { label: 'Leverage', value: 'Up to 1:500' },
-        { label: 'Commission', value: 'Zero commission on trades' },
-        { label: 'Swap-free', value: 'Adjustable swap-free option' },
-        { label: 'Funding', value: 'Instant deposit & faster withdrawal' },
-        { label: 'Platform', value: 'MetaTrader 5' },
-        { label: 'Support', value: '24×7 priority support' }
+        { label: 'Commission', value: 'Zero' },
+        { label: 'Swap-free', value: 'Adjustable' },
+        { label: 'Support', value: '24/7 Priority' }
       ],
       buttonText: 'Open Pro'
     },
@@ -62,19 +58,17 @@ export function AccountTypes({ className }: { className?: string }) {
       badge: 'VIP',
       subBadge: 'Best for VIP / high-volume traders',
       title: 'Elite',
-      tagline: 'VIP treatment. Exclusive support. Built for serious traders who expect the best.',
+      tagline: 'VIP treatment. Exclusive support. Built for serious traders.',
       price: '$2,000',
       priceLabel: 'minimum deposit',
       isPopular: false,
       isElite: true,
       details: [
-        { label: 'Spread', value: 'Ultra-low, raw spreads' },
-        { label: 'Leverage', value: 'Custom leverage' },
-        { label: 'Commission', value: 'Zero commission on trades' },
-        { label: 'Swap-free', value: 'Adjustable swap-free option' },
-        { label: 'VIP perks', value: 'Relationship manager & VIP events' },
-        { label: 'Platform', value: 'Advanced MT5 integration' },
-        { label: 'Support', value: '24/7 dedicated VIP support' }
+        { label: 'Spread', value: 'Raw from 0.0 pips' },
+        { label: 'Leverage', value: 'Custom' },
+        { label: 'Commission', value: 'Zero' },
+        { label: 'Swap-free', value: 'Adjustable' },
+        { label: 'Support', value: '24/7 Dedicated VIP' }
       ],
       buttonText: 'Open Elite'
     }
@@ -121,7 +115,7 @@ export function AccountTypes({ className }: { className?: string }) {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ y: -8 }}
-                className={`relative overflow-hidden rounded-[3rem] p-8 md:p-10 flex flex-col justify-between transition-all duration-500 w-full shrink-0 snap-center min-w-[85vw] sm:min-w-[60vw] md:min-w-0 shadow-sm border ${
+                className={`relative overflow-hidden rounded-[2.5rem] p-6 md:p-8 flex flex-col justify-between transition-all duration-500 w-full shrink-0 snap-center min-w-[85vw] sm:min-w-[60vw] md:min-w-0 shadow-sm border ${
                   acc.isElite
                     ? 'bg-[#0B1510] border-zinc-800/80 hover:shadow-[0_20px_45px_rgba(0,0,0,0.25)]'
                     : acc.isPopular
@@ -164,15 +158,15 @@ export function AccountTypes({ className }: { className?: string }) {
                   </p>
 
                   {/* Price Block */}
-                  <div className={`my-6 py-4 border-t border-b flex items-baseline gap-2 ${acc.isElite ? 'border-zinc-800' : 'border-zinc-100/80'}`}>
-                    <span className={`text-4xl md:text-5xl font-black font-mono tracking-tight ${acc.isElite ? 'text-white' : 'text-[#004D34]'}`}>{acc.price}</span>
+                  <div className={`my-4 py-3 border-t border-b flex items-baseline gap-2 ${acc.isElite ? 'border-zinc-800' : 'border-zinc-100/80'}`}>
+                    <span className={`text-3xl md:text-4xl font-black font-mono tracking-tight ${acc.isElite ? 'text-white' : 'text-[#004D34]'}`}>{acc.price}</span>
                     <span className="text-zinc-400 text-[10px] font-black uppercase tracking-wider">{acc.priceLabel}</span>
                   </div>
 
                   {/* Specifications List */}
-                  <div className="flex flex-col gap-4 mb-10">
+                  <div className="flex flex-col gap-2 mb-6">
                     {acc.details.map((d, idx) => (
-                      <div key={idx} className={`flex justify-between items-center w-full py-2 border-b last:border-0 ${acc.isElite ? 'border-zinc-800' : 'border-zinc-100'}`}>
+                      <div key={idx} className={`flex justify-between items-center w-full py-1.5 border-b last:border-0 ${acc.isElite ? 'border-zinc-800' : 'border-zinc-100'}`}>
                         <span className="text-[9px] font-black uppercase tracking-wider text-zinc-400">
                           {d.label}
                         </span>

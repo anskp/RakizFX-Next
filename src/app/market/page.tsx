@@ -199,7 +199,7 @@ export default function MarketPage() {
         </div>
       </section>
 
-      <LiveMarketChart />
+      {/* <LiveMarketChart /> */}
 
       <TradingViewMarkets />
 

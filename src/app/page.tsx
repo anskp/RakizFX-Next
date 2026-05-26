@@ -1,10 +1,9 @@
 import { Hero } from "@/components/Hero";
 import { Ticker } from "@/components/Ticker";
 import { Markets } from "@/components/Markets";
-import { TradingViewMarkets } from "@/components/TradingViewMarkets";
-import { CopyTrading } from "@/components/CopyTrading";
 import { AccountTypes } from "@/components/AccountTypes";
 import { MarketGrowth } from "@/components/MarketGrowth";
+import { WhyRakiz } from "@/components/WhyRakiz";
 import { TrustSection } from "@/components/TrustSection";
 
 export default function Home() {
@@ -13,11 +12,12 @@ export default function Home() {
       <Hero />
       <Ticker />
       <Markets />
-      <TradingViewMarkets />
+      {/* <TradingViewMarkets /> Hidden from Home, placed on Market page */}
       {/* <PowerfulPlatforms /> Hidden for now as requested */}
-      <CopyTrading />
+      {/* <CopyTrading /> Hidden from Home */}
       <AccountTypes />
       <MarketGrowth />
+      <WhyRakiz />
       {/* <BlogSection /> Hidden for now as requested */}
       <TrustSection />
     </>

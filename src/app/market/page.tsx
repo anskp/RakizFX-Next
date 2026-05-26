@@ -7,6 +7,7 @@ import {
   CheckCircle, Minimize2, BadgePercent, Hourglass, Waypoints
 } from 'lucide-react';
 import { LiveMarketChart } from '@/components/LiveMarketChart';
+import { TradingViewMarkets } from '@/components/TradingViewMarkets';
 
 function EconomicCalendarWidget() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -185,9 +186,9 @@ export default function MarketPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl lg:text-[clamp(3.5rem,4vw,4.5rem)] font-black uppercase tracking-tight mb-5 lg:mb-6 leading-tight lg:leading-[1.05] text-[#0d1410]">
+              <h1 className="text-4xl md:text-6xl lg:text-[clamp(3.5rem,4vw,4.5rem)] font-black uppercase tracking-tight mb-5 lg:mb-6 leading-tight lg:leading-[1.05] bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
                 Markets <br/>
-                <span className="text-[#004D34] font-semibold">Across Global Markets</span>
+                <span className="font-semibold">Across Global Markets</span>
               </h1>
 
               <p className="text-zinc-800 text-sm md:text-base lg:text-[clamp(1.125rem,1.5vw,1.25rem)] font-medium mb-8 lg:mb-10 leading-relaxed max-w-xl lg:max-w-2xl">
@@ -199,6 +200,8 @@ export default function MarketPage() {
       </section>
 
       <LiveMarketChart />
+
+      <TradingViewMarkets />
 
       {/* 3. Market Sections */}
       <section id="instruments" className="py-10 bg-white text-black">
@@ -215,7 +218,7 @@ export default function MarketPage() {
               <div className={`grid grid-cols-1 lg:grid-cols-12 gap-6 items-center ${idx % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
                 <div className="lg:col-span-5">
 
-                  <h3 className={`text-3xl md:text-4xl font-semibold uppercase tracking-tight mb-4 ${market.accent}`}>{market.title}</h3>
+                  <h3 className={`text-3xl md:text-4xl font-semibold uppercase tracking-tight mb-4 ${market.accent} font-montreal`}>{market.title}</h3>
                   <p className={`text-sm md:text-base leading-relaxed max-w-xl ${market.tone === 'bg-[#121212]' ? 'text-zinc-400' : 'text-zinc-600'}`}>
                     {market.desc}
                   </p>
@@ -245,9 +248,9 @@ export default function MarketPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             
             <div className="lg:col-span-5">
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-[0.9] text-black">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-[0.9] bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
                 We Believe in <br/>
-                <span className="text-primary font-normal italic">Transparent Costs</span>
+                <span className="font-normal italic">Transparent Costs</span>
               </h2>
               <p className="text-zinc-600 text-base md:text-lg mb-8 leading-relaxed font-medium">
                 Our pricing system ensures that your trading costs are always transparent and competitive. No hidden markups or sudden fees.
@@ -291,8 +294,8 @@ export default function MarketPage() {
           
           <div className="text-center mb-16">
 
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-[0.9]">
-              Fast & Secure <span className="text-nn font-normal italic">Funding</span>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-[0.9] bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+              Fast & Secure <span className="font-normal italic">Funding</span>
             </h2>
             <p className="text-zinc-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">
               Fund your account instantly using trusted global and regional payment methods with zero deposit fees.
@@ -337,7 +340,7 @@ export default function MarketPage() {
        <section id="calendar-events" className="py-24 bg-white border-t border-zinc-200">
          <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
            <div className="text-center mb-12">
-             <h2 className="text-4xl md:text-5xl font-semibold mb-6 tracking-tight uppercase text-[#004D34]">
+             <h2 className="text-h2 mb-6">
                Economic Calendar & Events
              </h2>
              <p className="text-zinc-600 text-base md:text-lg font-medium max-w-2xl mx-auto">
@@ -382,8 +385,8 @@ export default function MarketPage() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <h3 className="text-3xl md:text-5xl font-black uppercase text-black mb-6 leading-tight">
-                Automated Trading <br/><span className="text-primary font-normal italic">With Low Latency</span>
+              <h3 className="text-3xl md:text-5xl font-black uppercase mb-6 leading-tight bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+                Automated Trading <br/><span className="font-normal italic">With Low Latency</span>
               </h3>
               <p className="text-zinc-600 text-base md:text-lg mb-8 leading-relaxed font-medium">
                 Run Expert Advisors and automated strategies 24/7 using dedicated VPS infrastructure with reduced downtime and enhanced execution speed.
@@ -399,8 +402,8 @@ export default function MarketPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-[0.9] text-black">
-                Your Security <br/><span className="text-[#00ca73] font-normal italic">Comes First</span>
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-[0.9] bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+                Your Security <br/><span className="font-normal italic">Comes First</span>
               </h2>
               <p className="text-zinc-600 text-base md:text-lg mb-8 leading-relaxed font-medium">
                 Our strict financial custody architectures safeguard your assets through regulatory segregations, encrypted networks, and real-time ledger reviews.
@@ -433,7 +436,7 @@ export default function MarketPage() {
           <div className="bg-[#121212] border border-white/5 rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl">
             <div className="relative z-10">
               <div className="text-primary font-black text-[10px] uppercase tracking-[0.4em] mb-8">Start Your Journey</div>
-              <h2 className="text-4xl md:text-7xl font-bold text-white uppercase mb-6 tracking-tight leading-[0.9]">
+              <h2 className="text-4xl md:text-7xl font-bold uppercase mb-6 tracking-tight leading-[0.9] bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
                 Start Your Trading <br/>Journey Today
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl font-medium mb-12 max-w-3xl mx-auto leading-relaxed">

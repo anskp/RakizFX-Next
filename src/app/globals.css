@@ -1,14 +1,12 @@
-/* Primary: Neue Montreal (via Bunny Fonts) */
-@import url('https://fonts.bunny.net/css?family=neue-montreal:300,400,500,600,700,800&display=swap');
-/* Secondary: Open Sans (via Google Fonts) */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* Playfair Display (Serif) & Inter (Sans-Serif) Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
 
 @theme {
-  /* Typography - Primary: Neue Montreal, Secondary: Open Sans */
-  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  /* Typography - Primary: Playfair Display, Secondary: Inter */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-arabic: "Cairo", sans-serif;
-  --font-montreal: "neue-montreal", "Neue Montreal", "Open Sans", sans-serif;
+  --font-montreal: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
   
   /* Demo Theme Colors */
   --color-em: #005645;
@@ -124,19 +122,31 @@
 
   /* Typography System */
   .text-h1 {
-    @apply text-5xl md:text-6xl lg:text-7xl font-semibold leading-[0.9] tracking-tighter uppercase text-[#004D34];
+    @apply text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tighter uppercase bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal;
   }
   .text-h2 {
-    @apply text-4xl md:text-5xl font-semibold leading-tight tracking-tight uppercase text-[#004D34];
+    @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight uppercase bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal;
   }
   .text-h3 {
-    @apply text-3xl md:text-4xl font-semibold leading-snug tracking-tight uppercase text-[#004D34];
+    @apply text-3xl md:text-4xl font-semibold leading-snug tracking-tight uppercase bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal;
   }
   .text-h4 {
-    @apply text-xl md:text-2xl font-semibold leading-relaxed tracking-tight text-[#004D34];
+    @apply text-xl md:text-2xl font-semibold leading-relaxed tracking-tight text-[#004D34] font-montreal;
   }
+
+  /* Light/White-to-Green versions for Dark Backgrounds */
+  .text-h1-light {
+    @apply text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tighter uppercase bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal;
+  }
+  .text-h2-light {
+    @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight uppercase bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal;
+  }
+  .text-h3-light {
+    @apply text-3xl md:text-4xl font-semibold leading-snug tracking-tight uppercase bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal;
+  }
+
   .text-body {
-    @apply text-base md:text-lg leading-relaxed max-w-3xl;
+    @apply text-base md:text-lg leading-relaxed max-w-3xl font-sans;
   }
   .text-muted {
     @apply text-zinc-400 text-sm md:text-base leading-relaxed;

@@ -15,7 +15,7 @@ function TradingCopySection() {
     <section id="copy-trading" className="pt-0 pb-12 bg-white relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         <div className="text-center mb-0">
-          <h2 className="text-4xl md:text-5xl text-[#004D34] leading-[0.95] uppercase font-semibold tracking-tight mb-2">
+          <h2 className="text-h2 mb-2">
             Copy Trading
           </h2>
         </div>
@@ -26,16 +26,16 @@ function TradingCopySection() {
           viewport={{ once: true }}
           className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center mt-6 mb-8"
         >
-          <div className="lg:col-span-5 text-center lg:text-left">
-            <h3 className="text-3xl md:text-4xl font-semibold uppercase text-[#004D34] leading-tight mb-3">
-              Follow verified providers and mirror their trades
+          <div className="lg:col-span-5 text-center lg:text-left flex flex-col items-center lg:items-start">
+            <h3 className="text-3xl md:text-4xl font-black uppercase leading-tight mb-3 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+              Follow verified providers <br/><span className="font-normal italic">and mirror their trades</span>
             </h3>
             <p className="text-zinc-600 text-sm md:text-base leading-relaxed mb-4 max-w-lg mx-auto lg:mx-0">
               Fund your account, compare trader performance, then subscribe to a strategy. Once active, copied trades run automatically with your own allocation and risk controls.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-3">
               {["Fund", "Choose", "Copy"].map((item) => (
-                <span key={item} className="rounded-full bg-[#eafaf1] px-5 py-3 text-[10px] font-black uppercase tracking-widest text-[#004D34]">
+                <span key={item} className="rounded-full bg-[#eafaf1] px-5 py-3 text-[10px] font-black uppercase tracking-widest text-[#00ca73]">
                   {item}
                 </span>
               ))}
@@ -52,9 +52,9 @@ function TradingCopySection() {
         </motion.div>
 
         <div className="text-center mb-10 mt-6">
-          <h3 className="text-[10px] font-black uppercase tracking-widest text-[#004D34] mb-2">How to Start</h3>
-          <h4 className="text-3xl md:text-4xl font-semibold uppercase text-[#004D34] leading-tight">
-            Start copying top trades in a few steps
+          <h3 className="text-[10px] font-black uppercase tracking-widest text-[#00ca73] mb-2">How to Start</h3>
+          <h4 className="text-3xl md:text-4xl font-black uppercase leading-tight bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+            Start copying top trades <br/><span className="font-normal italic">in a few steps</span>
           </h4>
         </div>
 
@@ -91,10 +91,10 @@ function TradingCopySection() {
                 <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-3xl bg-white text-black shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
                   {step.icon}
                 </div>
-                <h5 className="text-xl md:text-2xl font-semibold text-black mb-2">
+                <h5 className="text-xl md:text-2xl font-black uppercase tracking-tight mb-2 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
                   {step.title}
                 </h5>
-                <div className="text-[10px] font-black text-[#004D34] mb-4 uppercase tracking-widest">
+                <div className="text-[10px] font-black text-[#00ca73] mb-4 uppercase tracking-widest">
                   {step.time}
                 </div>
                 <p className="max-w-xs mx-auto text-zinc-500 text-sm leading-relaxed">
@@ -159,9 +159,9 @@ export default function TradingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl lg:text-[clamp(3.5rem,4vw,4.5rem)] font-black uppercase tracking-tight mb-5 lg:mb-6 leading-tight lg:leading-[1.05] text-[#0d1410]">
+              <h1 className="text-4xl md:text-6xl lg:text-[clamp(3.5rem,4vw,4.5rem)] font-black uppercase tracking-tight mb-5 lg:mb-6 leading-tight lg:leading-[1.05] bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
                 Trade Global Markets <br/>
-                <span className="text-[#004D34] font-semibold">With Confidence</span>
+                <span className="font-semibold">With Confidence</span>
               </h1>
 
               <p className="text-zinc-800 text-sm md:text-base lg:text-[clamp(1.125rem,1.5vw,1.25rem)] font-medium mb-8 lg:mb-10 leading-relaxed max-w-xl lg:max-w-2xl">
@@ -185,7 +185,7 @@ export default function TradingPage() {
       <section id="benefits" className="py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight uppercase text-[#004D34]">
+            <h2 className="text-h2 mb-4">
               Why Trade With Us
             </h2>
             <p className="max-w-2xl mx-auto text-zinc-600 text-base leading-relaxed">
@@ -206,10 +206,10 @@ export default function TradingPage() {
               </div>
               <div className="relative z-10 flex flex-col items-center">
                 <Activity size={72} strokeWidth={1.5} className="text-primary mb-6 drop-shadow-lg" />
-                <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-white mb-4">
-                  Precision <span className="text-primary font-normal italic">Execution</span>
+                <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4 bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+                  Precision <span className="font-normal italic">Execution</span>
                 </h3>
-                <p className="text-zinc-300 text-base md:text-lg max-w-xl font-medium leading-relaxed">
+                <p className="text-zinc-300 text-base md:text-lg max-w-xl font-medium leading-relaxed font-sans">
                   Sub-10ms execution architecture connected to institutional liquidity venues.
                 </p>
               </div>
@@ -219,8 +219,8 @@ export default function TradingPage() {
             <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-white to-zinc-50 group p-8 md:p-12 flex flex-col items-center justify-center text-center min-h-[320px] md:min-h-[400px] border border-zinc-200 shadow-sm">
               <div className="relative z-10 flex flex-col items-center">
                 <Layers size={72} strokeWidth={1.5} className="text-[#004D34] mb-6 group-hover:text-primary transition-colors" />
-                <h3 className="text-2xl font-black uppercase tracking-tight text-black mb-4">Multi-Asset <br/>Markets</h3>
-                <p className="text-zinc-600 text-sm font-medium leading-relaxed max-w-[250px]">
+                <h3 className="text-2xl font-black uppercase tracking-tight mb-4 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal font-black">Multi-Asset <br/>Markets</h3>
+                <p className="text-zinc-600 text-sm font-medium leading-relaxed max-w-[250px] font-sans">
                   Trade forex, crypto, equities, commodities, indices, and ETFs through one ecosystem.
                 </p>
               </div>
@@ -230,8 +230,8 @@ export default function TradingPage() {
             <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-[#121212] group p-8 md:p-10 flex flex-col items-center justify-center text-center min-h-[260px] md:min-h-[350px]">
               <div className="relative z-10 flex flex-col items-center">
                 <Smartphone size={72} strokeWidth={1.5} className="text-white mb-6 group-hover:text-primary transition-colors" />
-                <h3 className="text-2xl font-black uppercase tracking-tight text-white mb-3">Professional Platforms</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed max-w-[250px]">
+                <h3 className="text-2xl font-black uppercase tracking-tight mb-3 bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">Professional Platforms</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed max-w-[250px] font-sans">
                   MT4, MT5, TradingView, WebTrader, and mobile trading environments.
                 </p>
               </div>
@@ -241,8 +241,8 @@ export default function TradingPage() {
             <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-[#eafaf1] to-white group p-8 md:p-10 flex flex-col items-center justify-center text-center min-h-[260px] md:min-h-[350px] border border-[#CDEEDB]/60">
               <div className="relative z-10 flex flex-col items-center">
                 <Shield size={72} strokeWidth={1.5} className="text-[#004D34] mb-6 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-black uppercase tracking-tight text-[#004D34] mb-3">Capital Protection</h3>
-                <p className="text-[#004D34]/80 text-sm font-medium leading-relaxed max-w-[250px]">
+                <h3 className="text-2xl font-black uppercase tracking-tight mb-3 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal font-black">Capital Protection</h3>
+                <p className="text-[#004D34]/80 text-sm font-medium leading-relaxed max-w-[250px] font-sans">
                   Enterprise-grade security, segregated client funds, and multi-layer compliance systems.
                 </p>
               </div>
@@ -251,8 +251,8 @@ export default function TradingPage() {
             {/* Medium Feature 4 */}
             <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-white group flex flex-col items-center justify-center text-center p-8 md:p-10 min-h-[260px] md:min-h-[350px] hover:shadow-xl transition-all border border-zinc-200 shadow-sm">
               <Globe size={72} strokeWidth={1.5} className="text-black mb-6 group-hover:text-primary transition-colors" />
-              <h3 className="text-xl font-black uppercase tracking-tight text-black mb-3">Global Funding Rails</h3>
-              <p className="text-zinc-500 text-sm leading-relaxed max-w-[250px]">
+              <h3 className="text-xl font-black uppercase tracking-tight mb-3 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">Global Funding Rails</h3>
+              <p className="text-zinc-500 text-sm leading-relaxed max-w-[250px] font-sans">
                 Fast deposits and withdrawals through banking, cards, crypto, and regional payment networks.
               </p>
             </div>
@@ -264,10 +264,10 @@ export default function TradingPage() {
       <section id="markets" className="py-24 bg-white text-black border-b border-zinc-200">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight uppercase leading-[0.9] text-[#004D34]">
+            <h2 className="text-h2 mb-4">
               Trading Ecosystem
             </h2>
-            <p className="max-w-2xl mx-auto text-zinc-600 text-base leading-relaxed">
+            <p className="max-w-2xl mx-auto text-zinc-600 text-base leading-relaxed font-sans">
               Access a comprehensive suite of financial instruments and professional tools within a single, unified environment built for performance.
             </p>
           </div>
@@ -276,8 +276,8 @@ export default function TradingPage() {
             {/* Available Markets Column */}
             <div className="lg:col-span-7 bg-gradient-to-b from-white to-white hover:from-[#CDEEDB] hover:to-white border border-zinc-200/80 hover:border-[#CDEEDB]/60 shadow-[0_10px_30px_rgba(0,0,0,0.01)] transition-all duration-300 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-[#004D34] mb-6">Available Markets</h3>
-                <p className="text-zinc-600 text-sm mb-10 max-w-md">
+                <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-6 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">Available Markets</h3>
+                <p className="text-zinc-600 text-sm mb-10 max-w-md font-sans">
                   Diversify your trading portfolio across a complete suite of underlying financial asset categories with high-speed execution.
                 </p>
               </div>
@@ -296,7 +296,7 @@ export default function TradingPage() {
 
             {/* What You Get Column */}
             <div className="lg:col-span-5 bg-gradient-to-b from-white to-white hover:from-[#CDEEDB] hover:to-white border border-zinc-200/80 hover:border-[#CDEEDB]/60 shadow-[0_10px_30px_rgba(0,0,0,0.01)] transition-all duration-300 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden">
-              <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-[#004D34] mb-6">What You Get</h3>
+              <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-6 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">What You Get</h3>
               
               <ul className="space-y-4">
                 {[
@@ -324,10 +324,10 @@ export default function TradingPage() {
       <section id="platforms" className="py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-10">
-            <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight uppercase text-[#004D34]">
+            <h2 className="text-h2 mb-4">
               Trading Platforms
             </h2>
-            <p className="mx-auto max-w-2xl text-zinc-600 text-base leading-relaxed">
+            <p className="mx-auto max-w-2xl text-zinc-600 text-base leading-relaxed font-sans">
               Trade with professional-grade terminals designed for clarity, speed and reliability. Each platform card includes a simple title and short description only.
             </p>
           </div>
@@ -353,10 +353,10 @@ export default function TradingPage() {
                     className="mx-auto h-64 w-auto object-contain transition-transform duration-500 hover:scale-105"
                   />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-slate-950 mb-3">
+                <h3 className="text-2xl md:text-3xl font-semibold tracking-tight mb-3 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
                   {platform.title}
                 </h3>
-                <p className="text-zinc-600 text-sm leading-relaxed">
+                <p className="text-zinc-600 text-sm leading-relaxed font-sans">
                   {platform.desc}
                 </p>
               </div>
@@ -383,10 +383,10 @@ export default function TradingPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-semibold mb-6 tracking-tight uppercase leading-[0.9] text-[#004D34]">
+              <h2 className="text-h2 mb-6">
                 Account Security
               </h2>
-              <p className="max-w-2xl mx-auto text-zinc-600 text-sm md:text-base leading-relaxed mb-10">
+              <p className="max-w-2xl mx-auto text-zinc-600 text-sm md:text-base leading-relaxed mb-10 font-sans">
                 Client protection comes first, with secure infrastructure, safeguarded funds, and platform-level controls designed to keep your trading environment resilient.
               </p>
 
@@ -407,8 +407,8 @@ export default function TradingPage() {
         <div className="max-w-[1200px] mx-auto">
           <div className="bg-[#121212] border border-white/5 rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl">
             <div className="relative z-10">
-              <div className="text-primary font-black text-[10px] uppercase tracking-[0.4em] mb-8">Start Your Journey</div>
-              <h2 className="text-4xl md:text-5xl font-semibold text-white uppercase mb-12 tracking-tight leading-[0.9]">
+              <div className="text-[#00ca73] font-black text-[10px] uppercase tracking-[0.4em] mb-8 font-sans">Start Your Journey</div>
+              <h2 className="text-4xl md:text-5xl font-semibold uppercase mb-12 tracking-tight leading-[0.9] bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
                 Start Your Journey
               </h2>
               

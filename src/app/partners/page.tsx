@@ -17,7 +17,7 @@ export default function PartnersPage() {
           
           <div className="text-center mb-20">
             <h2 className="text-h2 mb-6">
-              Our Partnership <br/><span className="text-primary font-normal italic">Channels</span>
+              Our Partnership <br/><span className="font-normal italic">Channels</span>
             </h2>
             <p className="text-zinc-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">
               Select the professional growth model that aligns with your network and business strategy.
@@ -39,7 +39,7 @@ export default function PartnersPage() {
             ].map((program, idx) => (
               <div key={idx} className="bg-zinc-50/50 border border-zinc-200/80 rounded-[2.5rem] p-8 md:p-10 hover:border-primary/40 hover:bg-zinc-50 hover:shadow-lg transition-all flex flex-col justify-between group">
                 <div>
-                  <h3 className="text-2xl font-bold uppercase tracking-tight text-zinc-900 mb-4">{program.title}</h3>
+                  <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">{program.title}</h3>
                   <p className="text-zinc-600 text-sm leading-relaxed mb-8">{program.desc}</p>
                 </div>
 
@@ -71,7 +71,7 @@ export default function PartnersPage() {
             
             <div className="lg:col-span-5">
               <h2 className="text-h2 mb-6">
-                Advanced Partner <br/><span className="text-primary font-normal italic">Portal</span>
+                Advanced Partner <br/><span className="font-normal italic">Portal</span>
               </h2>
               <p className="text-zinc-600 text-base md:text-lg mb-8 leading-relaxed font-medium">
                 Our leading affiliate portal gives you real-time data visualizers, transparent payout calculations, and customizable localized resources to supercharge your client conversions.
@@ -157,7 +157,7 @@ export default function PartnersPage() {
           
           <div className="text-center mb-20">
             <h2 className="text-h2 mb-6">
-              Why Partner With <span className="text-primary font-normal italic">RakizFX</span>
+              Why Partner With <span className="font-normal italic">RakizFX</span>
             </h2>
             <p className="text-zinc-500 text-lg md:text-xl font-medium max-w-3xl mx-auto">
               Our institutional reputation, deep liquidity, and support mechanisms form a foundation for your business growth.
@@ -204,7 +204,7 @@ export default function PartnersPage() {
           <div className="bg-gradient-to-b from-[#060F09] to-black border border-white/5 rounded-[3rem] p-10 md:p-20 text-center relative overflow-hidden shadow-2xl text-white">
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 blur-[120px] pointer-events-none rounded-full" />
             <div className="relative z-10">
-              <h2 className="text-h2 text-white mb-6">
+              <h2 className="text-h2-light mb-6">
                 Start Your Partnership <br/>Journey Today
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl font-medium mb-12 max-w-3xl mx-auto leading-relaxed">

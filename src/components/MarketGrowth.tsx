@@ -19,8 +19,8 @@ export function MarketGrowth() {
         <div className="relative overflow-hidden rounded-[3rem] bg-gradient-to-b from-[#CDEEDB] to-white border border-[#CDEEDB]/60 p-8 md:p-16 lg:p-24 flex flex-col md:flex-row items-center gap-16 group shadow-[0_30px_60px_rgba(0,77,52,0.04)]">
 
           <div className="flex-1 relative z-10 text-center md:text-left">
-            <h3 className="text-3xl md:text-5xl text-[#004D34] mb-6 leading-tight uppercase font-black tracking-tight">
-              Get <span className="text-primary font-black">RakizFx MT5</span> <br />on Your Preferred Platforms
+            <h3 className="text-3xl md:text-5xl bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block mb-6 leading-tight uppercase font-black tracking-tight font-montreal">
+              Get <span className="font-black">RakizFx MT5</span> <br />on Your Preferred Platforms
             </h3>
 
             <p className="text-zinc-600 text-base md:text-lg mb-8 max-w-xl leading-relaxed mx-auto md:mx-0 font-medium">

@@ -42,7 +42,7 @@ export function CopyTrading() {
           <div className="lg:col-span-5 flex flex-col justify-center text-left relative z-20">
             <h2 className="text-h2 mb-6 leading-tight">
               Top Traders. <br />
-              <span className="text-[#00ca73]">Copy Their Profits.</span>
+              <span className="font-semibold">Copy Their Profits.</span>
             </h2>
             <p className="text-zinc-600 text-sm md:text-base leading-relaxed max-w-xl">
               Choose from verified strategy managers, set your risk, and let their trades work for you. Perfect for both beginners and experienced managers looking for PAMM/MAM solutions.

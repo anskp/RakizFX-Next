@@ -11,7 +11,7 @@ export function TrustSection() {
       <section id="payments" className="pt-0 pb-16 bg-white text-black">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl mb-3">Fast, Secure & Flexible Payments</h2>
+            <h2 className="text-h2 mb-3">Fast, Secure & Flexible Payments</h2>
             <p className="text-zinc-500 text-sm font-medium max-w-2xl mx-auto">Multiple methods tailored for Asian traders. Most deposits processed instantly.</p>
           </div>
 
@@ -60,15 +60,17 @@ export function TrustSection() {
             className="bg-[#121212] border border-white/5 rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl"
           >
             <div className="relative z-10">
-              <h2 className="text-h2 text-white mb-6">Ready to get started?</h2>
-              <p className="text-zinc-400 text-lg md:text-xl font-medium mb-12 max-w-3xl mx-auto leading-relaxed">Transform your brokerage today</p>
+              <div className="text-[#00ca73] font-black text-[10px] uppercase tracking-[0.4em] mb-8 font-sans">Start Your Journey</div>
+              <h2 className="text-4xl md:text-5xl font-semibold uppercase mb-12 tracking-tight leading-[0.9] bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+                Start Your Journey
+              </h2>
               
               <div className="flex flex-wrap justify-center gap-5">
-                <button className="btn-primary">
-                  Open Account
+                <button className="bg-primary text-black font-black px-10 py-5 text-xs uppercase tracking-widest rounded-2xl hover:scale-105 transition-transform shadow-lg cursor-pointer">
+                  Open Live Account
                 </button>
-                <button className="btn-secondary">
-                  Request Demo
+                <button className="bg-transparent border border-white/20 text-white font-black px-10 py-5 text-xs uppercase tracking-widest rounded-2xl hover:bg-white/5 transition-colors cursor-pointer">
+                  Try Free Demo
                 </button>
               </div>
             </div>

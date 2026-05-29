@@ -61,7 +61,7 @@ export function TrustSection() {
           >
             <div className="relative z-10">
               <div className="text-[#00ca73] font-black text-[10px] uppercase tracking-[0.4em] mb-8 font-sans">Start Your Journey</div>
-              <h2 className="text-4xl md:text-5xl font-semibold uppercase mb-12 tracking-tight leading-[0.9] bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+              <h2 className="text-4xl md:text-5xl font-semibold uppercase mb-12 tracking-tight leading-[0.9] text-white inline-block font-montreal">
                 Start Your Journey
               </h2>
               

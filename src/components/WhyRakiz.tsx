@@ -34,9 +34,7 @@ export function WhyRakiz() {
 
       <div className="container-standard relative z-10">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <span className="text-[#00ca73] text-[10px] font-black uppercase tracking-[0.3em] block mb-3">
-            Why Choose Us
-          </span>
+
           <h2 className="text-h2 mb-5 uppercase">
             Why RakizFx?
           </h2>
@@ -58,11 +56,11 @@ export function WhyRakiz() {
               <div className="mb-6 group-hover:scale-110 transition-transform">
                 <img src={r.icon} alt={r.title} className="w-24 h-24 object-contain" />
               </div>
-              
+
               <h3 className="text-lg font-bold uppercase tracking-tight text-zinc-900 mb-3">
                 {r.title}
               </h3>
-              
+
               <p className="text-zinc-600 text-sm leading-relaxed">
                 {r.desc}
               </p>

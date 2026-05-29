@@ -48,7 +48,7 @@ export default function CompanyPage() {
               }
             ].map((card, idx) => (
               <div key={idx} className="bg-zinc-50/50 border border-zinc-200/80 rounded-[2.5rem] p-8 md:p-12 hover:border-primary/40 hover:bg-zinc-50 hover:shadow-lg transition-all group">
-                <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">{card.title}</h3>
+                <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 text-black inline-block font-montreal">{card.title}</h3>
                 <p className="text-zinc-600 text-sm leading-relaxed">{card.desc}</p>
               </div>
             ))}
@@ -122,7 +122,7 @@ export default function CompanyPage() {
             ].map((job, idx) => (
               <div key={idx} className="bg-zinc-50 border border-zinc-200/80 rounded-2xl p-6 flex flex-wrap justify-between items-center hover:border-primary/40 hover:bg-zinc-50 hover:shadow-md transition-all cursor-pointer group">
                 <div>
-                  <h4 className="text-lg font-bold uppercase tracking-wider mb-1 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">{job.role}</h4>
+                  <h4 className="text-lg font-bold uppercase tracking-wider mb-1 text-black inline-block font-montreal">{job.role}</h4>
                   <div className="text-zinc-500 text-[10px] uppercase font-black tracking-widest mt-1">
                     {job.dept} <span className="text-zinc-600 px-1.5">•</span> {job.location}
                   </div>

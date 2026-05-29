@@ -41,7 +41,7 @@ export function Hero() {
             ))}
           </span>
           <span
-            className="block whitespace-nowrap bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-black"
+            className="block whitespace-nowrap text-white inline-block font-black"
           >
             {"BEYOND LIMITS".split("").map((letter, i) => (
               <motion.span

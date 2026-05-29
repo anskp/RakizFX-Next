@@ -19,7 +19,7 @@ export function MarketGrowth() {
         <div className="relative overflow-hidden rounded-[3rem] bg-gradient-to-b from-[#CDEEDB] to-white border border-[#CDEEDB]/60 p-8 md:p-16 lg:p-24 flex flex-col md:flex-row items-center gap-16 group shadow-[0_30px_60px_rgba(0,77,52,0.04)]">
 
           <div className="flex-1 relative z-10 text-center md:text-left">
-            <h3 className="text-3xl md:text-5xl bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block mb-6 leading-tight uppercase font-black tracking-tight font-montreal">
+            <h3 className="text-3xl md:text-5xl text-black inline-block mb-6 leading-tight uppercase font-black tracking-tight font-montreal">
               Get <span className="font-black">RakizFx MT5</span> <br />on Your Preferred Platforms
             </h3>
 
@@ -27,36 +27,23 @@ export function MarketGrowth() {
               Access your RakizFx MT5 account across devices with a unified, secure experience. Stay connected to your market activity, insights, and portfolio contex anytime, anywhere.
             </p>
 
-            <div className="text-[#004D34] text-sm font-black mb-10 tracking-wider uppercase">
-              Available on iOS, Android, Windows, and macOS
+            <div className="text-[10px] sm:text-xs font-black text-black tracking-widest uppercase mb-4 text-center md:text-left">
+              Get it on
             </div>
-
-            <div className="hidden md:flex flex-col sm:flex-row flex-wrap xl:flex-nowrap gap-3 justify-center md:justify-start w-full">
+            <div className="flex flex-row gap-6 justify-center md:justify-start items-center">
               {/* App Store */}
-              <a href="#" className="flex items-center gap-2 bg-black hover:bg-zinc-900 border border-transparent rounded-xl px-4 py-2 flex-1 sm:flex-none justify-center sm:justify-start transition-all duration-200 shadow-md hover:scale-[1.02] whitespace-nowrap">
-                <img src="/icons/app-store-svgrepo-com (1).svg" alt="Apple" className="w-5 h-5 object-contain" />
-                <div className="flex flex-col items-start leading-none text-left">
-                  <span className="text-[7px] text-zinc-500 font-bold uppercase tracking-wider mb-0.5">Get it on</span>
-                  <span className="text-xs font-bold text-white tracking-tight">App Store</span>
-                </div>
+              <a href="#" className="transition-all duration-300 hover:scale-110 active:scale-95 block">
+                <img src="/icons/app-store-svgrepo-com (1).svg" alt="Apple App Store" className="w-12 h-12 md:w-14 md:h-14 object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.06)]" />
               </a>
 
               {/* Google Play */}
-              <a href="#" className="flex items-center gap-2 bg-black hover:bg-zinc-900 border border-transparent rounded-xl px-4 py-2 flex-1 sm:flex-none justify-center sm:justify-start transition-all duration-200 shadow-md hover:scale-[1.02] whitespace-nowrap">
-                <img src="/icons/google-play-store-svgrepo-com.svg" alt="Google Play" className="w-5 h-5 object-contain" />
-                <div className="flex flex-col items-start leading-none text-left">
-                  <span className="text-[7px] text-zinc-500 font-bold uppercase tracking-wider mb-0.5">Get it on</span>
-                  <span className="text-xs font-bold text-white tracking-tight">Google Play</span>
-                </div>
+              <a href="#" className="transition-all duration-300 hover:scale-110 active:scale-95 block">
+                <img src="/icons/google-play-store-svgrepo-com.svg" alt="Google Play Store" className="w-12 h-12 md:w-14 md:h-14 object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.06)]" />
               </a>
 
               {/* Windows */}
-              <a href="#" className="flex items-center gap-2 bg-black hover:bg-zinc-900 border border-transparent rounded-xl px-4 py-2 flex-1 sm:flex-none justify-center sm:justify-start transition-all duration-200 shadow-md hover:scale-[1.02] whitespace-nowrap">
-                <img src="/icons/windows-svgrepo-com.svg" alt="Windows" className="w-5 h-5 object-contain" />
-                <div className="flex flex-col items-start leading-none text-left">
-                  <span className="text-[7px] text-zinc-500 font-bold uppercase tracking-wider mb-0.5">Download for</span>
-                  <span className="text-xs font-bold text-white tracking-tight">Windows</span>
-                </div>
+              <a href="#" className="transition-all duration-300 hover:scale-110 active:scale-95 block">
+                <img src="/icons/windows-svgrepo-com.svg" alt="Windows" className="w-12 h-12 md:w-14 md:h-14 object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.06)]" />
               </a>
             </div>
           </div>
@@ -69,36 +56,6 @@ export function MarketGrowth() {
                 className="relative z-10 w-full h-auto drop-shadow-[0_80px_160px_rgba(0,77,52,0.06)] transition-transform duration-1000 group-hover:scale-[1.03]"
               />
             </div>
-          </div>
-
-          {/* Mobile Buttons */}
-          <div className="flex md:hidden flex-col sm:flex-row flex-wrap gap-3 justify-center w-full relative z-10 mt-2">
-            {/* App Store */}
-            <a href="#" className="flex items-center gap-2 bg-black hover:bg-zinc-900 border border-transparent rounded-xl px-4 py-2 flex-1 sm:flex-none justify-center sm:justify-start transition-all duration-200 shadow-md hover:scale-[1.02] whitespace-nowrap">
-              <img src="/icons/app-store-svgrepo-com (1).svg" alt="Apple" className="w-5 h-5 object-contain" />
-              <div className="flex flex-col items-start leading-none text-left">
-                <span className="text-[7px] text-zinc-500 font-bold uppercase tracking-wider mb-0.5">Get it on</span>
-                <span className="text-xs font-bold text-white tracking-tight">App Store</span>
-              </div>
-            </a>
-
-            {/* Google Play */}
-            <a href="#" className="flex items-center gap-2 bg-black hover:bg-zinc-900 border border-transparent rounded-xl px-4 py-2 flex-1 sm:flex-none justify-center sm:justify-start transition-all duration-200 shadow-md hover:scale-[1.02] whitespace-nowrap">
-              <img src="/icons/google-play-store-svgrepo-com.svg" alt="Google Play" className="w-5 h-5 object-contain" />
-              <div className="flex flex-col items-start leading-none text-left">
-                <span className="text-[7px] text-zinc-500 font-bold uppercase tracking-wider mb-0.5">Get it on</span>
-                <span className="text-xs font-bold text-white tracking-tight">Google Play</span>
-              </div>
-            </a>
-
-            {/* Windows */}
-            <a href="#" className="flex items-center gap-2 bg-black hover:bg-zinc-900 border border-transparent rounded-xl px-4 py-2 flex-1 sm:flex-none justify-center sm:justify-start transition-all duration-200 shadow-md hover:scale-[1.02] whitespace-nowrap">
-              <img src="/icons/windows-svgrepo-com.svg" alt="Windows" className="w-5 h-5 object-contain" />
-              <div className="flex flex-col items-start leading-none text-left">
-                <span className="text-[7px] text-zinc-500 font-bold uppercase tracking-wider mb-0.5">Download for</span>
-                <span className="text-xs font-bold text-white tracking-tight">Windows</span>
-              </div>
-            </a>
           </div>
         </div>
       </div>

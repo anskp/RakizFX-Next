@@ -210,7 +210,7 @@ export default function MagicBento({ noPadding = false }: { noPadding?: boolean 
           <img src="/assets/forex_core01.png" className="absolute right-[-4%] top-0 bottom-0 w-[55%] h-[90%] my-auto object-contain opacity-100 z-0 pointer-events-none" alt="Forex" />
 
           <div className="absolute left-6 top-6 z-10 text-left">
-            <div className="text-2xl md:text-4xl font-black uppercase tracking-tight leading-none bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+            <div className="text-2xl md:text-4xl font-black uppercase tracking-tight leading-none text-black inline-block font-montreal">
               Forex Core
             </div>
           </div>
@@ -227,7 +227,7 @@ export default function MagicBento({ noPadding = false }: { noPadding?: boolean 
           <ParticleCard className="card-small card-small--border-glow" disabled={disabled} style={{ overflow: 'visible' }}>
             <img src="/assets/goldandsilver01.png" className="absolute right-[-5%] bottom-[0%] w-[75%] h-[110%] object-contain z-0 pointer-events-none" alt="Commodities" />
             <div className="absolute left-4 bottom-4 z-10 text-left">
-              <div className="text-sm md:text-sm font-black uppercase tracking-widest leading-none bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+              <div className="text-sm md:text-sm font-black uppercase tracking-widest leading-none text-black inline-block font-montreal">
                 Commodities
               </div>
             </div>
@@ -236,7 +236,7 @@ export default function MagicBento({ noPadding = false }: { noPadding?: boolean 
           <ParticleCard className="card-small card-small--border-glow" disabled={disabled} style={{ overflow: 'visible' }}>
             <img src="/assets/indices01.png" className="absolute right-[-5%] bottom-[0%] w-[75%] h-[110%] object-contain z-0 pointer-events-none" alt="Indices" />
             <div className="absolute left-4 bottom-4 z-10 text-left">
-              <div className="text-sm md:text-sm font-black uppercase tracking-widest leading-none bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+              <div className="text-sm md:text-sm font-black uppercase tracking-widest leading-none text-black inline-block font-montreal">
                 Indices
               </div>
             </div>
@@ -259,7 +259,7 @@ export default function MagicBento({ noPadding = false }: { noPadding?: boolean 
           />
           
           <div className="absolute left-6 top-6 z-10 text-left">
-            <div className="text-lg md:text-2xl font-black uppercase tracking-tight leading-none bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+            <div className="text-lg md:text-2xl font-black uppercase tracking-tight leading-none text-black inline-block font-montreal">
               Crypto
             </div>
             <div className="text-[10px] text-emerald-700 italic mt-1 font-semibold">

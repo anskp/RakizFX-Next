@@ -186,7 +186,7 @@ export default function MarketPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl lg:text-[clamp(3.5rem,4vw,4.5rem)] font-black uppercase tracking-tight mb-5 lg:mb-6 leading-tight lg:leading-[1.05] bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+              <h1 className="text-4xl md:text-6xl lg:text-[clamp(3.5rem,4vw,4.5rem)] font-black uppercase tracking-tight mb-5 lg:mb-6 leading-tight lg:leading-[1.05] text-black inline-block font-montreal">
                 Markets <br/>
                 <span className="font-semibold">Across Global Markets</span>
               </h1>
@@ -248,7 +248,7 @@ export default function MarketPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             
             <div className="lg:col-span-5">
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-[0.9] bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-[0.9] text-black inline-block font-montreal">
                 We Believe in <br/>
                 <span className="font-normal italic">Transparent Costs</span>
               </h2>
@@ -276,12 +276,15 @@ export default function MarketPage() {
                 { title: 'Overnight Swaps', desc: 'Clear, transparent swap costs computed directly inside the platform.', icon: "/icons/Overnight Swaps.png" },
                 { title: 'Currency Conversion', desc: 'Transparent conversion rates with minimal margins applied on trades.', icon: "/icons/conversion.png" }
               ].map((fee, idx) => (
-                <div key={idx} className="bg-white border border-zinc-200 rounded-3xl p-8 relative overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col items-center text-center justify-center">
-                  <div className="mb-6 group-hover:scale-110 transition-transform">
-                    <img src={fee.icon} alt={fee.title} className="w-24 h-24 object-contain" />
+                <div key={idx} className="bg-white border border-zinc-200 shadow-xl rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl group flex flex-col items-center text-center justify-center min-h-[300px]">
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,202,115,0.05),transparent)] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative z-10 flex flex-col items-center justify-center">
+                    <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <img src={fee.icon} alt={fee.title} className="w-24 h-24 object-contain" />
+                    </div>
+                    <h4 className="text-lg font-black uppercase tracking-tight text-black mb-3">{fee.title}</h4>
+                    <p className="text-zinc-600 text-sm leading-relaxed max-w-xs">{fee.desc}</p>
                   </div>
-                  <h4 className="text-lg font-black uppercase tracking-tight text-black mb-3">{fee.title}</h4>
-                  <p className="text-zinc-600 text-sm leading-relaxed">{fee.desc}</p>
                 </div>
               ))}
             </div>
@@ -296,7 +299,7 @@ export default function MarketPage() {
           
           <div className="text-center mb-16">
 
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-[0.9] bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-[0.9] text-black inline-block font-montreal">
               Fast & Secure <span className="font-normal italic">Funding</span>
             </h2>
             <p className="text-zinc-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">
@@ -387,7 +390,7 @@ export default function MarketPage() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <h3 className="text-3xl md:text-5xl font-black uppercase mb-6 leading-tight bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+              <h3 className="text-3xl md:text-5xl font-black uppercase mb-6 leading-tight text-black inline-block font-montreal">
                 Automated Trading <br/><span className="font-normal italic">With Low Latency</span>
               </h3>
               <p className="text-zinc-600 text-base md:text-lg mb-8 leading-relaxed font-medium">
@@ -404,7 +407,7 @@ export default function MarketPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-[0.9] bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-[0.9] text-black inline-block font-montreal">
                 Your Security <br/><span className="font-normal italic">Comes First</span>
               </h2>
               <p className="text-zinc-600 text-base md:text-lg mb-8 leading-relaxed font-medium">
@@ -438,7 +441,7 @@ export default function MarketPage() {
           <div className="bg-[#121212] border border-white/5 rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl">
             <div className="relative z-10">
               <div className="text-primary font-black text-[10px] uppercase tracking-[0.4em] mb-8">Start Your Journey</div>
-              <h2 className="text-4xl md:text-7xl font-bold uppercase mb-6 tracking-tight leading-[0.9] bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">
+              <h2 className="text-4xl md:text-7xl font-bold uppercase mb-6 tracking-tight leading-[0.9] text-white inline-block font-montreal">
                 Start Your Trading <br/>Journey Today
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl font-medium mb-12 max-w-3xl mx-auto leading-relaxed">

@@ -39,7 +39,7 @@ export default function PartnersPage() {
             ].map((program, idx) => (
               <div key={idx} className="bg-zinc-50/50 border border-zinc-200/80 rounded-[2.5rem] p-8 md:p-10 hover:border-primary/40 hover:bg-zinc-50 hover:shadow-lg transition-all flex flex-col justify-between group">
                 <div>
-                  <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal">{program.title}</h3>
+                  <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 text-black inline-block font-montreal">{program.title}</h3>
                   <p className="text-zinc-600 text-sm leading-relaxed mb-8">{program.desc}</p>
                 </div>
 

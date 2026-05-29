@@ -145,10 +145,10 @@ export function AccountTypes({ className }: { className?: string }) {
                     )}
                   </div>
 
-                  <h3 className={`text-2xl md:text-3xl font-black uppercase tracking-tight mb-3 ${
+                  <h3 className={`text-2xl md:text-3xl font-black uppercase tracking-tight mb-3 font-montreal ${
                     acc.isElite 
-                      ? 'bg-gradient-to-r from-white to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal' 
-                      : 'bg-gradient-to-r from-[#060F09] to-[#00ca73] bg-clip-text text-transparent inline-block font-montreal'
+                      ? 'text-white' 
+                      : 'text-black'
                   }`}>
                     {acc.title}
                   </h3>

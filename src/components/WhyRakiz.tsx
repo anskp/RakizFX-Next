@@ -27,7 +27,7 @@ export function WhyRakiz() {
   ];
 
   return (
-    <section id="why-rakiz" className="py-24 bg-white relative overflow-hidden border-t border-zinc-100">
+    <section id="why-rakiz" className="py-24 section-bg-tactile relative overflow-hidden border-t border-zinc-200/50">
       {/* Premium accent lights */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#CDEEDB]/10 blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-primary/5 blur-[120px] pointer-events-none rounded-full" />
@@ -35,10 +35,10 @@ export function WhyRakiz() {
       <div className="container-standard relative z-10">
         <div className="text-center mb-16 max-w-3xl mx-auto">
 
-          <h2 className="text-h2 mb-5 uppercase">
+          <h2 className="text-h2 mb-5 uppercase text-black">
             Why RakizFx?
           </h2>
-          <p className="text-body text-zinc-500">
+          <p className="text-body text-zinc-600">
             We combine high-performance trading infrastructure with institutional-grade security architecture to deliver an unmatched workspace for modern global investors.
           </p>
         </div>
@@ -51,13 +51,13 @@ export function WhyRakiz() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="bg-zinc-50/50 border border-zinc-200/80 rounded-3xl p-8 hover:bg-zinc-50 hover:border-[#00ca73]/40 hover:shadow-md transition-all duration-300 group flex flex-col items-center justify-center text-center cursor-default"
+              className="card-3d-apple p-8 flex flex-col items-center justify-center text-center cursor-default"
             >
-              <div className="mb-6 group-hover:scale-110 transition-transform">
+              <div className="mb-6 transition-transform">
                 <img src={r.icon} alt={r.title} className="w-24 h-24 object-contain" />
               </div>
 
-              <h3 className="text-lg font-bold uppercase tracking-tight text-zinc-900 mb-3">
+              <h3 className="text-lg font-bold uppercase tracking-tight text-zinc-900 mb-3 font-montreal">
                 {r.title}
               </h3>
 

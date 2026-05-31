@@ -79,7 +79,7 @@ export function TradingViewMarkets() {
   }, []);
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden border-t border-zinc-200">
+    <section className="py-24 section-bg-tactile relative overflow-hidden border-t border-zinc-200">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Text */}
@@ -101,7 +101,7 @@ export function TradingViewMarkets() {
                 Institutional-grade pricing and analysis powered by TradingView. Access over 500+ instruments with millisecond-perfect execution protocols and sub-10ms latency.
               </p>
               <button className="bg-black text-white px-8 py-5 text-xs uppercase font-bold tracking-widest hover:bg-primary hover:text-black transition-all flex items-center gap-3 rounded-xl shadow-md group cursor-pointer self-start">
-                Explore All Asset Groups <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                Explore All Asset Groups <ArrowRight size={16} />
               </button>
             </motion.div>
           </div>
@@ -109,14 +109,14 @@ export function TradingViewMarkets() {
           {/* Right Chart */}
           <div className="lg:col-span-7 w-full relative z-20">
             <div className="absolute -top-6 right-2 z-30">
-              <span className="text-[9px] text-zinc-400 font-bold uppercase tracking-widest bg-white px-2 py-0.5 rounded shadow-sm border border-zinc-100">Indicative Pricing Only</span>
+              <span className="text-[9px] text-zinc-400 font-bold uppercase tracking-widest bg-white px-2 py-0.5 rounded shadow-sm border border-zinc-150">Indicative Pricing Only</span>
             </div>
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-3xl border border-zinc-200 shadow-xl overflow-hidden p-1 relative w-full"
+              className="card-3d-apple overflow-hidden p-1 relative w-full"
             >
               <div className="tradingview-widget-container w-full rounded-2xl overflow-hidden" ref={containerRef}>
                 <div className="tradingview-widget-container__widget"></div>

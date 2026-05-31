@@ -200,7 +200,7 @@ export default function MagicBento({ noPadding = false }: { noPadding?: boolean 
   const cardClass = 'magic-bento-card';
 
   return (
-    <div className={`bento-section ${noPadding ? '' : 'py-20 px-6 lg:px-12'}`}>
+    <div className={`bento-section section-bg-tactile ${noPadding ? '' : 'py-20 px-6 lg:px-12'}`}>
       <GlobalSpotlight gridRef={gridRef} disabled={disabled} />
 
       <div className="rakiz-bento-grid" ref={gridRef}>

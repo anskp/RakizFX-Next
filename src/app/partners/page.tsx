@@ -12,7 +12,7 @@ export default function PartnersPage() {
     <div className="bg-white text-zinc-900 min-h-screen">
       
       {/* 2. Partnership Programs Grid (LIGHT STYLE) */}
-      <section id="programs" className="pt-40 pb-20 bg-white border-b border-zinc-100">
+      <section id="programs" className="pt-40 pb-20 section-bg-tactile border-b border-zinc-100">
         <div className="container-standard">
           
           <div className="text-center mb-20">
@@ -37,7 +37,7 @@ export default function PartnersPage() {
                 perks: ["High CPA commission per active user", "Exclusive localized marketing packs", "Dedicated individual account manager"]
               }
             ].map((program, idx) => (
-              <div key={idx} className="bg-zinc-50/50 border border-zinc-200/80 rounded-[2.5rem] p-8 md:p-10 hover:border-primary/40 hover:bg-zinc-50 hover:shadow-lg transition-all flex flex-col justify-between group">
+              <div key={idx} className="card-3d-apple p-8 md:p-10 flex flex-col justify-between group cursor-default">
                 <div>
                   <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 text-black inline-block font-montreal">{program.title}</h3>
                   <p className="text-zinc-600 text-sm leading-relaxed mb-8">{program.desc}</p>
@@ -54,7 +54,7 @@ export default function PartnersPage() {
                   </ul>
                   <div className="flex items-center gap-2 text-zinc-900 font-bold text-xs uppercase tracking-widest group-hover:text-primary transition-colors cursor-pointer">
                     <span>Apply to Channel</span>
-                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight size={14} />
                   </div>
                 </div>
               </div>
@@ -65,7 +65,7 @@ export default function PartnersPage() {
       </section>
 
       {/* 3. Partner Tracking Dashboard (LIGHT STYLE) */}
-      <section className="section-padding bg-[#f8fafc]">
+      <section className="section-padding section-bg-tactile">
         <div className="container-standard">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             
@@ -93,7 +93,7 @@ export default function PartnersPage() {
             </div>
 
             {/* Mock Dashboard Widget (LIGHT CONTAINER WITH SHADOW) */}
-            <div className="lg:col-span-7 bg-white border border-zinc-200 shadow-xl rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden">
+            <div className="lg:col-span-7 card-3d-apple p-8 md:p-12 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 blur-[120px] pointer-events-none" />
               
               <div className="flex items-center justify-between mb-8 border-b border-zinc-100 pb-6">
@@ -130,7 +130,7 @@ export default function PartnersPage() {
                       { type: 'IB Rebate', date: 'May 18, 2026', status: 'Success', amt: '+$842.10' },
                       { type: 'CPA Payout', date: 'May 15, 2026', status: 'Success', amt: '+$1,200.00' }
                     ].map((tx, idx) => (
-                      <div key={idx} className="flex justify-between items-center bg-zinc-50 border border-zinc-100 rounded-xl p-4">
+                      <div key={idx} className="flex justify-between items-center bg-white border border-zinc-200 rounded-xl p-4 shadow-sm">
                         <div>
                           <div className="text-xs font-bold text-zinc-900 uppercase tracking-wider">{tx.type}</div>
                           <div className="text-[10px] text-zinc-500 mt-0.5">{tx.date}</div>
@@ -152,7 +152,7 @@ export default function PartnersPage() {
       </section>
 
       {/* 4. Why Partner With Us (LIGHT STYLE) */}
-      <section className="section-padding bg-white border-t border-zinc-100">
+      <section className="section-padding section-bg-tactile border-t border-zinc-200/50">
         <div className="container-standard">
           
           <div className="text-center mb-20">
@@ -187,10 +187,10 @@ export default function PartnersPage() {
                 desc: "Experienced individual partner advisors available 24/7 to support campaigns and operational demands."
               }
             ].map((card, idx) => (
-              <div key={idx} className="bg-zinc-50/50 border border-zinc-200/80 rounded-3xl p-8 hover:bg-zinc-50 hover:border-primary/40 hover:shadow-md transition-all duration-300 group flex flex-col items-center justify-center text-center">
-                <div className="text-black mb-6 group-hover:scale-110 transition-transform">{card.icon}</div>
-                <h3 className="text-lg font-bold uppercase tracking-tight text-zinc-900 mb-3">{card.title}</h3>
-                <p className="text-zinc-600 text-sm leading-relaxed">{card.desc}</p>
+              <div key={idx} className="card-3d-apple p-8 flex flex-col items-center justify-center text-center">
+                <div className="text-black mb-6 transition-transform">{card.icon}</div>
+                <h3 className="text-lg font-bold uppercase tracking-tight text-zinc-900 mb-3 font-montreal">{card.title}</h3>
+                <p className="text-[#66666f] text-sm leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -198,13 +198,13 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* 5. CTA Section (DARK CONTAINER FOR CONTRAST) */}
-      <section className="py-24 px-6 bg-[#f8fafc]">
+      {/* 5. CTA Section */}
+      <section className="py-24 px-6 section-bg-tactile">
         <div className="max-w-[1200px] mx-auto">
           <div className="bg-gradient-to-b from-[#060F09] to-black border border-white/5 rounded-[3rem] p-10 md:p-20 text-center relative overflow-hidden shadow-2xl text-white">
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 blur-[120px] pointer-events-none rounded-full" />
             <div className="relative z-10">
-              <h2 className="text-h2-light mb-6">
+              <h2 className="text-h2-light mb-6 text-white">
                 Start Your Partnership <br/>Journey Today
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl font-medium mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -212,7 +212,7 @@ export default function PartnersPage() {
               </p>
               
               <div className="flex flex-wrap justify-center gap-5">
-                <button className="bg-primary text-black font-black px-10 py-5 text-xs uppercase tracking-widest rounded-2xl hover:scale-105 transition-transform shadow-lg cursor-pointer">
+                <button className="bg-primary text-black font-black px-10 py-5 text-xs uppercase tracking-widest rounded-2xl shadow-lg cursor-pointer">
                   Become a Partner
                 </button>
                 <button className="bg-transparent border border-white/20 text-white font-black px-10 py-5 text-xs uppercase tracking-widest rounded-2xl hover:bg-white/5 transition-colors cursor-pointer">

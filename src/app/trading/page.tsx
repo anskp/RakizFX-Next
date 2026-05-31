@@ -182,10 +182,10 @@ export default function TradingPage() {
       </section>
 
       {/* 2. Why Trade With Us */}
-      <section id="benefits" className="py-24 bg-white">
+      <section id="benefits" className="py-24 section-bg-tactile">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-h2 mb-4">
+            <h2 className="text-h2 mb-4 text-[#1d1d1f]">
               Why Trade With Us
             </h2>
             <p className="max-w-2xl mx-auto text-zinc-600 text-base leading-relaxed">
@@ -195,74 +195,73 @@ export default function TradingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
             {/* Large Feature 1 */}
-            <div className="md:col-span-8 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-zinc-900 group flex flex-col items-center text-center justify-center p-10 md:p-12 min-h-[320px] md:min-h-[400px]">
+            <div className="md:col-span-8 relative overflow-hidden card-3d-apple flex flex-col items-center text-center justify-center p-10 md:p-12 min-h-[320px] md:min-h-[400px]">
               <div className="absolute inset-0 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=1200&q=80" 
                   alt="Precision Execution" 
-                  className="w-full h-full object-cover opacity-30 group-hover:scale-105 group-hover:opacity-20 transition-all duration-700" 
+                  className="w-full h-full object-cover opacity-5 transition-all duration-700" 
                 />
-                <div className="absolute inset-0 bg-black/50" />
               </div>
               <div className="relative z-10 flex flex-col items-center">
-                <div className="mb-6 group-hover:scale-110 transition-transform">
+                <div className="mb-6 transition-transform">
                   <img src="/icons/Precision_Execution.png" alt="Precision Execution" className="w-28 h-28 object-contain" />
                 </div>
-                <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4 text-white inline-block font-montreal">
+                <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4 text-[#1d1d1f] inline-block font-montreal">
                   Precision <span className="font-normal italic">Execution</span>
                 </h3>
-                <p className="text-zinc-300 text-base md:text-lg max-w-xl font-medium leading-relaxed font-sans">
+                <p className="text-[#66666f] text-base md:text-lg max-w-xl font-medium leading-relaxed font-sans">
                   Sub-10ms execution architecture connected to institutional liquidity venues.
                 </p>
               </div>
             </div>
 
             {/* Medium Feature 1 */}
-            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-white to-zinc-50 group p-8 md:p-12 flex flex-col items-center justify-center text-center min-h-[320px] md:min-h-[400px] border border-zinc-200 shadow-sm">
+            <div className="md:col-span-4 relative overflow-hidden card-3d-apple p-8 md:p-12 flex flex-col items-center justify-center text-center min-h-[320px] md:min-h-[400px]">
               <div className="relative z-10 flex flex-col items-center">
-                <div className="mb-6 group-hover:scale-110 transition-transform">
+                <div className="mb-6 transition-transform">
                   <img src="/icons/Multi-Asset_Markets.png" alt="Multi-Asset Markets" className="w-28 h-28 object-contain" />
                 </div>
-                <h3 className="text-2xl font-black uppercase tracking-tight mb-4 text-black inline-block font-montreal font-black">Multi-Asset <br/>Markets</h3>
-                <p className="text-zinc-600 text-sm font-medium leading-relaxed max-w-[250px] font-sans">
+                <h3 className="text-2xl font-black uppercase tracking-tight mb-4 text-[#1d1d1f] inline-block font-montreal font-black">Multi-Asset <br/>Markets</h3>
+                <p className="text-[#66666f] text-sm font-medium leading-relaxed max-w-[250px] font-sans">
                   Trade forex, crypto, equities, commodities, indices, and ETFs through one ecosystem.
                 </p>
               </div>
             </div>
 
             {/* Medium Feature 2 */}
-            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-[#121212] group p-8 md:p-10 flex flex-col items-center justify-center text-center min-h-[260px] md:min-h-[350px]">
+            <div className="md:col-span-4 relative overflow-hidden card-3d-apple p-8 md:p-10 flex flex-col items-center justify-center text-center min-h-[260px] md:min-h-[350px]">
               <div className="relative z-10 flex flex-col items-center">
-                <div className="mb-6 group-hover:scale-110 transition-transform">
+                <div className="mb-6 transition-transform">
                   <img src="/icons/Professional_Platforms.png" alt="Professional Platforms" className="w-28 h-28 object-contain" />
                 </div>
-                <h3 className="text-2xl font-black uppercase tracking-tight mb-3 text-white inline-block font-montreal">Professional Platforms</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed max-w-[250px] font-sans">
+                <h3 className="text-2xl font-black uppercase tracking-tight mb-3 text-[#1d1d1f] inline-block font-montreal">Professional Platforms</h3>
+                <p className="text-[#66666f] text-sm leading-relaxed max-w-[250px] font-sans">
                   MT4, mt5, TradingView, WebTrader, and mobile trading environments.
                 </p>
               </div>
             </div>
 
             {/* Medium Feature 3 */}
-            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-[#eafaf1] to-white group p-8 md:p-10 flex flex-col items-center justify-center text-center min-h-[260px] md:min-h-[350px] border border-[#CDEEDB]/60">
+            <div className="md:col-span-4 relative overflow-hidden card-3d-apple p-8 md:p-10 flex flex-col items-center justify-center text-center min-h-[260px] md:min-h-[350px]">
               <div className="relative z-10 flex flex-col items-center">
-                <div className="mb-6 group-hover:scale-110 transition-transform">
+                <div className="mb-6 transition-transform">
                   <img src="/icons/Capital_Protection.png" alt="Capital Protection" className="w-28 h-28 object-contain" />
                 </div>
-                <h3 className="text-2xl font-black uppercase tracking-tight mb-3 text-black inline-block font-montreal font-black">Capital Protection</h3>
-                <p className="text-[#004D34]/80 text-sm font-medium leading-relaxed max-w-[250px] font-sans">
+                <h3 className="text-2xl font-black uppercase tracking-tight mb-3 text-[#1d1d1f] inline-block font-montreal font-black">Capital Protection</h3>
+                <p className="text-[#66666f] text-sm font-medium leading-relaxed max-w-[250px] font-sans">
                   Enterprise-grade security, segregated client funds, and multi-layer compliance systems.
                 </p>
               </div>
             </div>
 
             {/* Medium Feature 4 */}
-            <div className="md:col-span-4 relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-white group flex flex-col items-center justify-center text-center p-8 md:p-10 min-h-[260px] md:min-h-[350px] hover:shadow-xl transition-all border border-zinc-200 shadow-sm">
-              <div className="mb-6 group-hover:scale-110 transition-transform">
+            <div className="md:col-span-4 relative overflow-hidden card-3d-apple flex flex-col items-center justify-center text-center p-8 md:p-10 min-h-[260px] md:min-h-[350px]">
+              <div className="mb-6 transition-transform">
                 <img src="/icons/Global_Funding_Rails.png" alt="Global Funding Rails" className="w-28 h-28 object-contain" />
               </div>
-              <h3 className="text-xl font-black uppercase tracking-tight mb-3 text-black inline-block font-montreal">Global Funding Rails</h3>
-              <p className="text-zinc-500 text-sm leading-relaxed max-w-[250px] font-sans">
+              <h3 className="text-xl font-black uppercase tracking-tight mb-3 text-[#1d1d1f] inline-block font-montreal">Global Funding Rails</h3>
+              <p className="text-[#66666f] text-sm leading-relaxed max-w-[250px] font-sans">
                 Fast deposits and withdrawals through banking, cards, crypto, and regional payment networks.
               </p>
             </div>
@@ -271,7 +270,7 @@ export default function TradingPage() {
       </section>
 
       {/* 3. Trading Overview Bento Grid */}
-      <section id="markets" className="py-24 bg-white text-black border-b border-zinc-200">
+      <section id="markets" className="py-24 section-bg-tactile text-black border-b border-zinc-200/50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-h2 mb-4">
@@ -284,10 +283,10 @@ export default function TradingPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Available Markets Column */}
-            <div className="lg:col-span-7 bg-gradient-to-b from-white to-white hover:from-[#CDEEDB] hover:to-white border border-zinc-200/80 hover:border-[#CDEEDB]/60 shadow-[0_10px_30px_rgba(0,0,0,0.01)] transition-all duration-300 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden flex flex-col justify-between">
+            <div className="lg:col-span-7 card-3d-apple p-8 md:p-12 relative overflow-hidden flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-6 text-black inline-block font-montreal">Available Markets</h3>
-                <p className="text-zinc-600 text-sm mb-10 max-w-md font-sans">
+                <p className="text-[#66666f] text-sm mb-10 max-w-md font-sans">
                   Diversify your trading portfolio across a complete suite of underlying financial asset categories with high-speed execution.
                 </p>
               </div>
@@ -297,7 +296,7 @@ export default function TradingPage() {
                   'Forex', 'Shares', 'Indices', 'Commodities', 
                   'Metals', 'Energies', 'Cryptocurrencies', 'ETFs', 'Futures'
                 ].map((market, idx) => (
-                  <span key={idx} className="bg-zinc-50 border border-zinc-200 px-5 py-3 rounded-full text-xs font-black uppercase tracking-wider text-zinc-800 hover:border-primary/30 transition-all cursor-default">
+                  <span key={idx} className="bg-white border border-zinc-200 px-5 py-3 rounded-full text-xs font-black uppercase tracking-wider text-zinc-800 hover:border-primary/30 transition-all cursor-default shadow-sm">
                     {market}
                   </span>
                 ))}
@@ -305,7 +304,7 @@ export default function TradingPage() {
             </div>
 
             {/* What You Get Column */}
-            <div className="lg:col-span-5 bg-gradient-to-b from-white to-white hover:from-[#CDEEDB] hover:to-white border border-zinc-200/80 hover:border-[#CDEEDB]/60 shadow-[0_10px_30px_rgba(0,0,0,0.01)] transition-all duration-300 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden">
+            <div className="lg:col-span-5 card-3d-apple p-8 md:p-12 relative overflow-hidden">
               <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-6 text-black inline-block font-montreal">What You Get</h3>
               
               <ul className="space-y-4">
@@ -331,7 +330,7 @@ export default function TradingPage() {
       </div>
 
       {/* 5. Trading Platforms */}
-      <section id="platforms" className="py-24 bg-white">
+      <section id="platforms" className="py-24 section-bg-tactile">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-10">
             <h2 className="text-h2 mb-4">
@@ -360,7 +359,7 @@ export default function TradingPage() {
                   <img
                     src={platform.image}
                     alt={platform.title}
-                    className="mx-auto h-64 w-auto object-contain transition-transform duration-500 hover:scale-105"
+                    className="mx-auto h-64 w-auto object-contain transition-transform duration-500"
                   />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-semibold tracking-tight mb-3 text-black inline-block font-montreal">
@@ -389,7 +388,7 @@ export default function TradingPage() {
       {/* <TradingCopySection /> */}
 
       {/* 7. Security Section */}
-      <section id="security" className="pt-20 pb-10 relative overflow-hidden bg-white text-black border-t border-zinc-200">
+      <section id="security" className="pt-20 pb-10 relative overflow-hidden section-bg-tactile text-black border-t border-zinc-200/50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <div>
@@ -413,9 +412,9 @@ export default function TradingPage() {
       </section>
 
       {/* 9. CTA Section */}
-      <section className="pt-10 pb-24 px-6 bg-white">
+      <section className="pt-10 pb-24 px-6 section-bg-tactile">
         <div className="max-w-[1200px] mx-auto">
-          <div className="bg-[#121212] border border-white/5 rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl">
+          <div className="bg-[#121212] border border-white/5 rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl text-white">
             <div className="relative z-10">
               <div className="text-[#00ca73] font-black text-[10px] uppercase tracking-[0.4em] mb-8 font-sans">Start Your Journey</div>
               <h2 className="text-4xl md:text-5xl font-semibold uppercase mb-12 tracking-tight leading-[0.9] text-white inline-block font-montreal">
@@ -423,7 +422,7 @@ export default function TradingPage() {
               </h2>
               
               <div className="flex flex-wrap justify-center gap-5">
-                <button className="bg-primary text-black font-black px-10 py-5 text-xs uppercase tracking-widest rounded-2xl hover:scale-105 transition-transform shadow-lg cursor-pointer">
+                <button className="bg-primary text-black font-black px-10 py-5 text-xs uppercase tracking-widest rounded-2xl shadow-lg cursor-pointer">
                   Open Live Account
                 </button>
                 <button className="bg-transparent border border-white/20 text-white font-black px-10 py-5 text-xs uppercase tracking-widest rounded-2xl hover:bg-white/5 transition-colors cursor-pointer">

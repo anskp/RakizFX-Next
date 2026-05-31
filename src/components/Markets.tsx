@@ -72,7 +72,7 @@ export function Markets() {
   ];
 
   return (
-    <section id="markets" className="section-padding bg-white flex flex-col items-center overflow-hidden relative">
+    <section id="markets" className="section-padding section-bg-tactile flex flex-col items-center overflow-hidden relative">
       <div className="container-standard relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-h2 mb-4">

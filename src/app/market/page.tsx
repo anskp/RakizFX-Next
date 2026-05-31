@@ -204,7 +204,7 @@ export default function MarketPage() {
       <TradingViewMarkets />
 
       {/* 3. Market Sections */}
-      <section id="instruments" className="py-10 bg-white text-black">
+      <section id="instruments" className="py-10 section-bg-tactile text-black">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 space-y-7">
           {marketSections.map((market, idx) => (
             <motion.div
@@ -213,11 +213,10 @@ export default function MarketPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
-              className={`${market.tone} rounded-[2rem] px-7 py-7 md:px-10 md:py-8`}
+              className={`${market.tone} card-3d-apple-colored px-7 py-7 md:px-10 md:py-8 cursor-default`}
             >
               <div className={`grid grid-cols-1 lg:grid-cols-12 gap-6 items-center ${idx % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
                 <div className="lg:col-span-5">
-
                   <h3 className={`text-3xl md:text-4xl font-semibold uppercase tracking-tight mb-4 ${market.accent} font-montreal`}>{market.title}</h3>
                   <p className={`text-sm md:text-base leading-relaxed max-w-xl ${market.tone === 'bg-[#121212]' ? 'text-zinc-400' : 'text-zinc-600'}`}>
                     {market.desc}
@@ -243,7 +242,7 @@ export default function MarketPage() {
       </section>
 
       {/* 4. Transparent Pricing & Fees */}
-      <section id="pricing" className="py-24 bg-zinc-50 border-b border-zinc-200">
+      <section id="pricing" className="py-24 section-bg-tactile border-b border-zinc-200">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             
@@ -276,14 +275,13 @@ export default function MarketPage() {
                 { title: 'Overnight Swaps', desc: 'Clear, transparent swap costs computed directly inside the platform.', icon: "/icons/Overnight Swaps.png" },
                 { title: 'Currency Conversion', desc: 'Transparent conversion rates with minimal margins applied on trades.', icon: "/icons/conversion.png" }
               ].map((fee, idx) => (
-                <div key={idx} className="bg-white border border-zinc-200 shadow-xl rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl group flex flex-col items-center text-center justify-center min-h-[300px]">
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,202,115,0.05),transparent)] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div key={idx} className="card-3d-apple p-8 md:p-12 relative overflow-hidden flex flex-col items-center text-center justify-center min-h-[300px]">
                   <div className="relative z-10 flex flex-col items-center justify-center">
-                    <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="mb-6 transition-transform duration-300">
                       <img src={fee.icon} alt={fee.title} className="w-24 h-24 object-contain" />
                     </div>
                     <h4 className="text-lg font-black uppercase tracking-tight text-black mb-3">{fee.title}</h4>
-                    <p className="text-zinc-600 text-sm leading-relaxed max-w-xs">{fee.desc}</p>
+                    <p className="text-[#66666f] text-sm leading-relaxed max-w-xs">{fee.desc}</p>
                   </div>
                 </div>
               ))}
@@ -294,11 +292,10 @@ export default function MarketPage() {
       </section>
 
       {/* 5. Deposit & Withdrawal Section */}
-      <section id="funding" className="py-24 bg-[#f4f7f6] text-black">
+      <section id="funding" className="py-24 section-bg-tactile text-black">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           
           <div className="text-center mb-16">
-
             <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-[0.9] text-black inline-block font-montreal">
               Fast & Secure <span className="font-normal italic">Funding</span>
             </h2>
@@ -331,7 +328,7 @@ export default function MarketPage() {
               { title: 'Zero Fees', desc: 'No transaction fees or surprise deductions applied on credit card deposits.' },
               { title: 'Global Accessibility', desc: 'Accessible worldwide with local bank integration setups.' }
             ].map((benefit, idx) => (
-              <div key={idx} className="bg-white border border-zinc-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div key={idx} className="card-3d-apple p-6">
                 <h4 className="text-sm font-bold uppercase tracking-tight text-zinc-800 mb-2">{benefit.title}</h4>
                 <p className="text-zinc-500 text-xs leading-relaxed">{benefit.desc}</p>
               </div>
@@ -341,34 +338,40 @@ export default function MarketPage() {
         </div>
       </section>
 
-{/* 6. Economic Calendar & Events Section */}
-       <section id="calendar-events" className="py-24 bg-white border-t border-zinc-200">
-         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-           <div className="text-center mb-12">
-             <h2 className="text-h2 mb-6">
-               Economic Calendar & Events
-             </h2>
-             <p className="text-zinc-600 text-base md:text-lg font-medium max-w-2xl mx-auto">
-               Track key global economic events, central bank decisions, and market-moving releases in real time.
-             </p>
-           </div>
+      {/* 6. Economic Calendar & Events Section */}
+      <section id="calendar-events" className="py-24 section-bg-tactile border-t border-zinc-200/50">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Left Widget */}
+            <div className="lg:col-span-8 w-full order-2 lg:order-1">
+              <div className="bg-white border border-zinc-200 rounded-[2rem] p-6 overflow-hidden shadow-md" style={{ minHeight: '600px' }}>
+                <EconomicCalendarWidget />
+              </div>
+            </div>
 
-           <div className="bg-zinc-50 border border-zinc-200 rounded-[2rem] p-6 overflow-hidden" style={{ minHeight: '500px' }}>
-             <EconomicCalendarWidget />
-           </div>
-         </div>
-       </section>
+            {/* Right Content */}
+            <div className="lg:col-span-4 flex flex-col justify-center text-left order-1 lg:order-2">
+              <h2 className="text-h2 mb-6">
+                Economic <br/>Calendar <br/>& <span className="font-normal italic">Events</span>
+              </h2>
+              <p className="text-zinc-600 text-base md:text-lg leading-relaxed font-medium">
+                Track key global economic events, central bank decisions, and market-moving releases in real time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-{/* 7. VPS Showcase Section */}
-       <section id="vps" className="py-24 bg-white border-t border-zinc-200">
-         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-             <div className="order-2 lg:order-1 bg-zinc-50 border border-zinc-200 rounded-[2.5rem] p-6 relative overflow-hidden shadow-sm">
-               <div className="absolute top-0 right-0 w-40 h-40 bg-primary/5 blur-[80px]" />
-               <div className="flex items-center justify-between mb-8">
-                 <div className="text-xs font-black uppercase tracking-wider text-zinc-500">Dedicated VPS Metrics</div>
-                 <span className="w-2.5 h-2.5 rounded-full bg-primary animate-ping" />
-               </div>
+      {/* 7. VPS Showcase Section */}
+      <section id="vps" className="py-24 section-bg-tactile border-t border-zinc-200/50">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1 card-3d-apple p-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-primary/5 blur-[80px]" />
+              <div className="flex items-center justify-between mb-8">
+                <div className="text-xs font-black uppercase tracking-wider text-zinc-500">Dedicated VPS Metrics</div>
+                <span className="w-2.5 h-2.5 rounded-full bg-primary animate-ping" />
+              </div>
 
               <div className="space-y-6">
                 {[
@@ -403,7 +406,7 @@ export default function MarketPage() {
       </section>
 
       {/* 8. Security Section */}
-      <section id="security" className="py-24 relative overflow-hidden bg-white text-black border-t border-zinc-200">
+      <section id="security" className="py-24 relative overflow-hidden section-bg-tactile text-black border-t border-zinc-200/50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -423,7 +426,7 @@ export default function MarketPage() {
                 "Negative balance protection",
                 "Secure payment gateways"
               ].map((feat, idx) => (
-                <div key={idx} className="bg-gradient-to-b from-white to-white hover:from-[#CDEEDB] hover:to-white border border-zinc-200/80 hover:border-[#CDEEDB]/60 shadow-[0_10px_30px_rgba(0,0,0,0.01)] transition-all duration-300 rounded-2xl p-6 flex items-start gap-4 cursor-default">
+                <div key={idx} className="card-3d-apple p-6 flex items-start gap-4 cursor-default">
                   <CheckCircle className="text-[#00ca73] shrink-0 mt-0.5" size={16} />
                   <div>
                     <h4 className="text-sm font-black text-zinc-800 uppercase tracking-wider">{feat}</h4>
@@ -436,9 +439,9 @@ export default function MarketPage() {
       </section>
 
       {/* 9. CTA Section */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-24 px-6 section-bg-tactile">
         <div className="max-w-[1200px] mx-auto">
-          <div className="bg-[#121212] border border-white/5 rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl">
+          <div className="bg-[#121212] border border-white/5 rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl text-white">
             <div className="relative z-10">
               <div className="text-primary font-black text-[10px] uppercase tracking-[0.4em] mb-8">Start Your Journey</div>
               <h2 className="text-4xl md:text-7xl font-bold uppercase mb-6 tracking-tight leading-[0.9] text-white inline-block font-montreal">
@@ -449,7 +452,7 @@ export default function MarketPage() {
               </p>
               
               <div className="flex flex-wrap justify-center gap-5">
-                <button className="bg-primary text-black font-black px-10 py-5 text-xs uppercase tracking-widest rounded-2xl hover:scale-105 transition-transform shadow-lg cursor-pointer">
+                <button className="bg-primary text-black font-black px-10 py-5 text-xs uppercase tracking-widest rounded-2xl shadow-lg cursor-pointer">
                   Open Live Account
                 </button>
                 <button className="bg-transparent border border-white/20 text-white font-black px-10 py-5 text-xs uppercase tracking-widest rounded-2xl hover:bg-white/5 transition-colors cursor-pointer">

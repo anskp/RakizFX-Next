@@ -41,7 +41,7 @@ export function TradersSay() {
   ];
 
   return (
-    <section className="pt-4 pb-24 bg-white border-t border-zinc-100 relative overflow-hidden">
+    <section className="pt-4 pb-24 section-bg-tactile border-t border-zinc-100 relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
 
         {/* Section Heading */}
@@ -53,8 +53,8 @@ export function TradersSay() {
             transition={{ duration: 0.5 }}
           >
 
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight text-[#004D34]">
-              Trusted Across <span className="text-[#00ca73] font-normal italic">Traders</span>
+            <h2 className="text-h2 mb-6">
+              Trusted Across <span className="font-normal italic">Traders</span>
             </h2>
           </motion.div>
         </div>
@@ -68,7 +68,7 @@ export function TradersSay() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.15 }}
-              className="bg-gradient-to-b from-white to-white hover:from-[#CDEEDB] hover:to-white border border-zinc-200/80 hover:border-[#CDEEDB]/60 shadow-[0_10px_30px_rgba(0,0,0,0.01)] hover:shadow-[0_20px_45px_rgba(0,77,52,0.03)] transition-all duration-500 rounded-[2.5rem] p-8 md:p-10 relative overflow-hidden group flex flex-col justify-between cursor-default"
+              className="card-3d-apple p-8 md:p-10 relative overflow-hidden group flex flex-col justify-between cursor-default"
             >
               {/* Quote Mark Icon */}
               <div className="absolute top-6 right-8 text-[#00ca73]/10 group-hover:text-[#00ca73]/20 transition-colors pointer-events-none">

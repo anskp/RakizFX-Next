@@ -2,22 +2,22 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { 
-  Users, Handshake, Percent, TrendingUp, BarChart3, 
-  Globe, CheckCircle, ArrowRight, Award 
+import {
+  Users, Handshake, Percent, TrendingUp, BarChart3,
+  Globe, CheckCircle, ArrowRight, Award
 } from 'lucide-react';
 
 export default function PartnersPage() {
   return (
     <div className="bg-white text-zinc-900 min-h-screen">
-      
+
       {/* 2. Partnership Programs Grid (LIGHT STYLE) */}
       <section id="programs" className="pt-40 pb-20 section-bg-tactile border-b border-zinc-100">
         <div className="container-standard">
-          
+
           <div className="text-center mb-20">
             <h2 className="text-h2 mb-6">
-              Our Partnership <br/><span className="font-normal italic">Channels</span>
+              Our Partnership <br /><span className="font-normal italic">Channels</span>
             </h2>
             <p className="text-zinc-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">
               Select the professional growth model that aligns with your network and business strategy.
@@ -68,10 +68,10 @@ export default function PartnersPage() {
       <section className="section-padding section-bg-tactile">
         <div className="container-standard">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            
+
             <div className="lg:col-span-5">
               <h2 className="text-h2 mb-6">
-                Advanced Partner <br/><span className="font-normal italic">Portal</span>
+                Advanced Partner <br /><span className="font-normal italic">Portal</span>
               </h2>
               <p className="text-zinc-600 text-base md:text-lg mb-8 leading-relaxed font-medium">
                 Our leading affiliate portal gives you real-time data visualizers, transparent payout calculations, and customizable localized resources to supercharge your client conversions.
@@ -93,58 +93,12 @@ export default function PartnersPage() {
             </div>
 
             {/* Mock Dashboard Widget (LIGHT CONTAINER WITH SHADOW) */}
-            <div className="lg:col-span-7 card-3d-apple p-8 md:p-12 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 blur-[120px] pointer-events-none" />
-              
-              <div className="flex items-center justify-between mb-8 border-b border-zinc-100 pb-6">
-                <div>
-                  <div className="text-zinc-500 text-[10px] uppercase font-black tracking-widest mb-1">Partner Portal</div>
-                  <h4 className="text-lg font-black uppercase text-zinc-900">Reward Dashboard</h4>
-                </div>
-                <div className="text-right">
-                  <div className="text-zinc-500 text-[9px] uppercase font-bold mb-1">Commission Pool</div>
-                  <div className="font-mono text-lg font-black text-primary">$4,842.50</div>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <div className="grid grid-cols-3 gap-4 border-b border-zinc-100 pb-4">
-                  <div>
-                    <div className="text-[10px] uppercase font-bold text-zinc-500 mb-1">Monthly Leads</div>
-                    <div className="font-mono text-sm font-black text-zinc-900">+142</div>
-                  </div>
-                  <div>
-                    <div className="text-[10px] uppercase font-bold text-zinc-500 mb-1">Conversion Rate</div>
-                    <div className="font-mono text-sm font-black text-primary">34.8%</div>
-                  </div>
-                  <div>
-                    <div className="text-[10px] uppercase font-bold text-zinc-500 mb-1">Total Active Clients</div>
-                    <div className="font-mono text-sm font-black text-zinc-900">1,248</div>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="text-xs font-black uppercase tracking-wider text-zinc-500 mb-4">Recent Payout Transactions</div>
-                  <div className="space-y-3">
-                    {[
-                      { type: 'IB Rebate', date: 'May 18, 2026', status: 'Success', amt: '+$842.10' },
-                      { type: 'CPA Payout', date: 'May 15, 2026', status: 'Success', amt: '+$1,200.00' }
-                    ].map((tx, idx) => (
-                      <div key={idx} className="flex justify-between items-center bg-white border border-zinc-200 rounded-xl p-4 shadow-sm">
-                        <div>
-                          <div className="text-xs font-bold text-zinc-900 uppercase tracking-wider">{tx.type}</div>
-                          <div className="text-[10px] text-zinc-500 mt-0.5">{tx.date}</div>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-xs font-mono font-black text-primary">{tx.amt}</div>
-                          <div className="text-[9px] text-zinc-500 mt-0.5">{tx.status}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
+            <div className="lg:col-span-7 card-3d-apple overflow-hidden relative p-0 flex items-center justify-center min-h-[450px] aspect-[4/3]">
+              <img
+                src="/assets/partnerDashboard_bgless.png"
+                alt="RakizFX Institutional Partner Portal Dashboard"
+                className="w-full h-full object-cover"
+              />
             </div>
 
           </div>
@@ -154,7 +108,7 @@ export default function PartnersPage() {
       {/* 4. Why Partner With Us (LIGHT STYLE) */}
       <section className="section-padding section-bg-tactile border-t border-zinc-200/50">
         <div className="container-standard">
-          
+
           <div className="text-center mb-20">
             <h2 className="text-h2 mb-6">
               Why Partner With <span className="font-normal italic">RakizFX</span>
@@ -167,28 +121,28 @@ export default function PartnersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: <Award size={48} strokeWidth={1.25} />,
+                icon: "/icons/Leading_Reputation.png",
                 title: "Leading Reputation",
                 desc: "Partner with a highly trusted multi-asset broker. Premium security standards and operational transparency."
               },
               {
-                icon: <TrendingUp size={48} strokeWidth={1.25} />,
+                icon: "/icons/Flexible_Rebate_Schemes.png",
                 title: "Flexible Rebate Schemes",
                 desc: "Bespoke commission systems custom-tailored to suit different client strategies and referrers' business plans."
               },
               {
-                icon: <BarChart3 size={48} strokeWidth={1.25} />,
+                icon: "/icons/Premium_Reporting.png",
                 title: "Premium Reporting",
                 desc: "Fully detailed analytical panels to trace click conversions, active deposits, volume generated, and commissions."
               },
               {
-                icon: <Users size={48} strokeWidth={1.25} />,
+                icon: "/icons/Dedicated_Support_Team.png",
                 title: "Dedicated Support Team",
                 desc: "Experienced individual partner advisors available 24/7 to support campaigns and operational demands."
               }
             ].map((card, idx) => (
-              <div key={idx} className="card-3d-apple p-8 flex flex-col items-center justify-center text-center">
-                <div className="text-black mb-6 transition-transform">{card.icon}</div>
+              <div key={idx} className="card-3d-apple p-8 flex flex-col items-center justify-center text-center cursor-default">
+                <img src={card.icon} alt={card.title} className="w-24 h-24 object-contain mb-6 mx-auto" />
                 <h3 className="text-lg font-bold uppercase tracking-tight text-zinc-900 mb-3 font-montreal">{card.title}</h3>
                 <p className="text-[#66666f] text-sm leading-relaxed">{card.desc}</p>
               </div>
@@ -205,12 +159,12 @@ export default function PartnersPage() {
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 blur-[120px] pointer-events-none rounded-full" />
             <div className="relative z-10">
               <h2 className="text-h2-light mb-6 text-white">
-                Start Your Partnership <br/>Journey Today
+                Start Your Partnership <br />Journey Today
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl font-medium mb-12 max-w-3xl mx-auto leading-relaxed">
                 Contact our relationship team and custom design a premium compensation model that matches your volume and targets.
               </p>
-              
+
               <div className="flex flex-wrap justify-center gap-5">
                 <button className="bg-primary text-black font-black px-10 py-5 text-xs uppercase tracking-widest rounded-2xl shadow-lg cursor-pointer">
                   Become a Partner

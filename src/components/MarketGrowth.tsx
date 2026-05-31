@@ -27,23 +27,9 @@ export function MarketGrowth() {
               Access your RakizFx MT5 account across devices with a unified, secure experience. Stay connected to your market activity, insights, and portfolio contex anytime, anywhere.
             </p>
 
-            <div className="text-[10px] sm:text-xs font-black text-black tracking-widest uppercase mb-4 text-center md:text-left">
-              Get it on
-            </div>
             <div className="flex flex-row gap-6 justify-center md:justify-start items-center">
-              {/* App Store */}
-              <a href="#" className="transition-all duration-300 block">
-                <img src="/icons/app-store-svgrepo-com (1).svg" alt="Apple App Store" className="w-12 h-12 md:w-14 md:h-14 object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.06)]" />
-              </a>
-
-              {/* Google Play */}
-              <a href="#" className="transition-all duration-300 block">
-                <img src="/icons/google-play-store-svgrepo-com.svg" alt="Google Play Store" className="w-12 h-12 md:w-14 md:h-14 object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.06)]" />
-              </a>
-
-              {/* Windows */}
-              <a href="#" className="transition-all duration-300 block">
-                <img src="/icons/windows-svgrepo-com.svg" alt="Windows" className="w-12 h-12 md:w-14 md:h-14 object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.06)]" />
+              <a href="#" className="transition-all duration-300 block max-w-[450px]">
+                <img src="/assets/download_buttonss.png" alt="Download RakizFx MT5 Platforms" className="w-full h-auto object-contain" />
               </a>
             </div>
           </div>

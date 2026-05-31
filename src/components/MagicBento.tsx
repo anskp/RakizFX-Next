@@ -245,19 +245,19 @@ export default function MagicBento({ noPadding = false }: { noPadding?: boolean 
 
         {/* ── RIGHT TALL: Crypto ── */}
         <ParticleCard className={`${cardClass} card-right`} disabled={disabled}>
-          <img 
-            src="/assets/cryptocoins01.png" 
-            className="absolute top-0 bottom-0 object-contain z-0 crypto-image pointer-events-none" 
-            style={{ 
-              width: isMobile ? '55%' : '90%', 
+          <img
+            src="/assets/coinsss_crypto.png"
+            className="absolute top-0 bottom-0 object-contain z-0 crypto-image pointer-events-none"
+            style={{
+              width: isMobile ? '55%' : '90%',
               height: '90%',
-              right: isMobile ? '-4%' : '50%', 
-              transform: isMobile ? 'none' : 'translateX(50%)', 
-              margin: isMobile ? 'auto 0' : 'auto' 
-            }} 
-            alt="Crypto" 
+              right: isMobile ? '-4%' : '50%',
+              transform: isMobile ? 'none' : 'translateX(50%)',
+              margin: isMobile ? 'auto 0' : 'auto'
+            }}
+            alt="Crypto"
           />
-          
+
           <div className="absolute left-6 top-6 z-10 text-left">
             <div className="text-lg md:text-2xl font-black uppercase tracking-tight leading-none text-black inline-block font-montreal">
               Crypto

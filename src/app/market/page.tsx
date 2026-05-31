@@ -366,30 +366,12 @@ export default function MarketPage() {
       <section id="vps" className="py-24 section-bg-tactile border-t border-zinc-200/50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1 card-3d-apple p-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-primary/5 blur-[80px]" />
-              <div className="flex items-center justify-between mb-8">
-                <div className="text-xs font-black uppercase tracking-wider text-zinc-500">Dedicated VPS Metrics</div>
-                <span className="w-2.5 h-2.5 rounded-full bg-primary animate-ping" />
-              </div>
-
-              <div className="space-y-6">
-                {[
-                  { label: 'Latency to RakizFX Servers', val: '< 0.8 ms', label2: 'Active EAs Running', val2: '99.99%' },
-                  { label: 'Operating System Host', val: 'Windows Server 2022', label2: 'Virtual CPU Cores', val2: '4 Cores' }
-                ].map((row, idx) => (
-                  <div key={idx} className="grid grid-cols-2 gap-4 border-b border-zinc-200 pb-4 last:border-0 last:pb-0">
-                    <div>
-                      <div className="text-[10px] uppercase font-bold text-zinc-500 mb-1">{row.label}</div>
-                      <div className="font-mono text-sm font-black text-black">{row.val}</div>
-                    </div>
-                    <div>
-                      <div className="text-[10px] uppercase font-bold text-zinc-500 mb-1">{row.label2}</div>
-                      <div className="font-mono text-sm font-black text-black">{row.val2}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="order-2 lg:order-1 card-3d-apple overflow-hidden relative p-0 flex items-center justify-center min-h-[450px] aspect-[4/3] w-full">
+              <img 
+                src="/assets/vps_server.png" 
+                alt="RakizFX Institutional VPS Infrastructure" 
+                className="w-full h-full object-cover"
+              />
             </div>
 
             <div className="order-1 lg:order-2">

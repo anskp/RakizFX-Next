@@ -27,28 +27,29 @@ export default function CompanyPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                icon: <Shield className="text-primary" size={24} />,
+                icon: "/icons/Absolute_Transparency.png",
                 title: "Absolute Transparency",
                 desc: "Every transaction, custody pool, and overnight calculation is handled with strict accounting standards. Client assets are kept completely segregated at tier-1 custodial global banking groups, fully separated from corporate accounts."
               },
               {
-                icon: <Cpu className="text-primary" size={24} />,
+                icon: "/icons/Engineered_Performance.png",
                 title: "Engineered Performance",
                 desc: "We focus heavily on technical infrastructure. Our servers maintain high-speed fiber interlinkages to aggregate liquidity feeds directly from global LPs, allowing execution metrics to comfortably sit below the 40ms threshold."
               },
               {
-                icon: <Users className="text-primary" size={24} />,
+                icon: "/icons/Institutional_Custody.png",
                 title: "Institutional Custody",
                 desc: "Client funds are secured with deep multi-layer encryption architectures. We utilize leading regulatory protocols, negative balance safety nets, and strict withdrawal audits to protect active capital pools."
               },
               {
-                icon: <Award className="text-primary" size={24} />,
+                icon: "/icons/Regulatory_Standards.png",
                 title: "Regulatory Standards",
                 desc: "Adhering to clean global financial guidelines and anti-money laundering policies. Our operations undergo routine third-party audits to secure and maintain institutional licensing compliance."
               }
             ].map((card, idx) => (
-              <div key={idx} className="card-3d-apple p-8 md:p-12 flex flex-col justify-between">
+              <div key={idx} className="card-3d-apple p-8 md:p-12 flex flex-col items-center justify-center text-center cursor-default">
                 <div>
+                  <img src={card.icon} alt={card.title} className="w-24 h-24 object-contain mb-6 mx-auto" />
                   <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 text-black inline-block font-montreal">{card.title}</h3>
                   <p className="text-[#66666f] text-sm leading-relaxed">{card.desc}</p>
                 </div>
@@ -88,15 +89,12 @@ export default function CompanyPage() {
             </div>
 
             {/* Visual World Map Mock (LIGHT CARD SHADOW) */}
-            <div className="card-3d-apple p-8 md:p-12 relative overflow-hidden min-h-[300px] flex items-center justify-center">
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,255,120,0.05),transparent)] pointer-events-none" />
-              <div className="text-center relative z-10">
-                <div className="text-2xl font-black uppercase text-zinc-900 mb-4">Interlinked Latency Grid</div>
-                <div className="inline-flex items-center gap-3 bg-white border border-zinc-200 px-4 py-2 rounded-full shadow-sm">
-                  <span className="w-2.5 h-2.5 rounded-full bg-primary animate-ping" />
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-zinc-600">LD4 Node Online</span>
-                </div>
-              </div>
+            <div className="card-3d-apple overflow-hidden relative p-0 flex items-center justify-center min-h-[450px] aspect-[4/3] w-full">
+              <img 
+                src="/assets/latency_map.png" 
+                alt="RakizFX Global Low-Latency Node Network" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
